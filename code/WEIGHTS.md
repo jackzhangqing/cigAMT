@@ -1,6 +1,6 @@
 # Pretrained models
 
-The inference-only checkpoint archives have been prepared locally. **They become downloadable only after the maintainer attaches them to the `weights-v1` GitHub Release.** A normal Git push does not upload these attachments.
+The nine checkpoint archives are available in the [weights-v1 GitHub Release](https://github.com/jackzhangqing/cigAMT/releases/tag/weights-v1): 128 downstream inference assets and two Noise-DiT generation checkpoints, totaling 1,514,617,640 bytes. All nine uploaded archives were verified against the manifest by size and SHA-256. Release attachments are distributed separately from Git source.
 
 ## Archive inventory
 
@@ -28,7 +28,7 @@ The GeoAMT-DiT reference-generator checkpoint referenced by the two released 10k
 
 ## Download and verify
 
-After the attachments are published:
+List the available archives or download and verify a selected archive:
 
 ```bash
 python tools/download_weights.py --list

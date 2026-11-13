@@ -1,7 +1,9 @@
 {
   "release_tag": "weights-v1",
   "repository": "jackzhangqing/cigAMT",
-  "publication_status": "prepared_locally_upload_separately",
+  "publication_status": "published_github_release",
+  "release_url": "https://github.com/jackzhangqing/cigAMT/releases/tag/weights-v1",
+  "published_at": "2026-11-13T20:52:03Z",
   "inference_assets": 130,
   "sferic_assets": 48,
   "amt_assets": 80,

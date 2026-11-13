@@ -2,7 +2,7 @@
 
 **A Massive-Scale Benchmark Dataset and Baselines for Audio Magnetotelluric Signal Understanding and Restoration**
 
-[Project page](https://jackzhangqing.github.io/cigAMT/) ? [Dataset & waveform previews](https://huggingface.co/datasets/ZhangQing123/cigAMT) ? [Data inventory](DATA_INVENTORY.md) ? [Code](code/README.md) ? [Pretrained models](code/WEIGHTS.md)
+[Project page](https://jackzhangqing.github.io/cigAMT/) | [Dataset & waveform previews](https://huggingface.co/datasets/ZhangQing123/cigAMT) | [Data inventory](DATA_INVENTORY.md) | [Code](code/README.md) | [Pretrained models](code/WEIGHTS.md)
 
 Qing Zhang, Rujun Chen, Xinming Wu, Hongchun Yao, Hui Gao, and Yimin Dou. Manuscript; public paper and supplementary links will be added when available.
 
@@ -71,7 +71,7 @@ preview[0]["preview_image"].show()
 
 Each command block starts from the repository root. Outputs should be outside downloaded data. CPU is used below for portability; choose a supported CUDA device for full training.
 
-**Sferic identification** ? [full instructions](code/sferic/README.md):
+**Sferic identification** ([full instructions](code/sferic/README.md)):
 
 ```bash
 cd code/sferic
@@ -80,7 +80,7 @@ python benchmark.py audit --config configs/main.json --set data_root=../../data/
 python benchmark.py train --config configs/main.json --model tcn --seed 42 --set data_root=../../data/sferic_24khz --set output_root=../../outputs/sferic --device cpu
 ```
 
-**Seven-task AMT benchmark** ? [full instructions](code/amt/README.md):
+**Seven-task AMT benchmark** ([full instructions](code/amt/README.md)):
 
 ```bash
 cd code/amt
