@@ -22,6 +22,12 @@ The approximately **29.4 GB** Hugging Face core includes frozen splits, task con
 
 The Dataset Viewer has four configurations: `sample_previews` (32 actual waveform images), `sferic_24khz`, `reference_150hz`, and `noise_library`. The last three are complete metadata indexes; `data_file`, `array_key`, and `array_row` address waveform banks.
 
+## Dataset construction
+
+[![cigAMT dataset construction pipeline](docs/assets/images/construction.png)](docs/assets/images/construction.png)
+
+*Construction of the 24 kHz sferic branch, the 150 Hz reference-signal branch, and the independent noise library. Reference signals combine curated field data, physics-based synthesis, and generative augmentation; noise resources combine field extraction, procedural synthesis, and conditional diffusion generation. Generated samples and sferic augmentation are restricted to training. Click the image to enlarge.*
+
 ## Installation
 
 Clone this repository and use Python 3.10 or 3.11 with a suitable PyTorch build. Then install the module dependencies:
