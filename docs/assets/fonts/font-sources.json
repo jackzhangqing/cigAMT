@@ -1,0 +1,34 @@
+{
+  "provider": "Google Fonts",
+  "license": "SIL Open Font License 1.1",
+  "faces": [
+    {
+      "family": "Inter",
+      "style": "normal",
+      "file": "inter-latin.woff2",
+      "bytes": 48256,
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+    },
+    {
+      "family": "JetBrains Mono",
+      "style": "normal",
+      "file": "jetbrains-mono-latin.woff2",
+      "bytes": 31432,
+      "source": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2"
+    },
+    {
+      "family": "Source Serif 4",
+      "style": "italic",
+      "file": "source-serif-4-italic-latin.woff2",
+      "bytes": 51576,
+      "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEFH2_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US0r6aX0.woff2"
+    },
+    {
+      "family": "Source Serif 4",
+      "style": "normal",
+      "file": "source-serif-4-latin.woff2",
+      "bytes": 50936,
+      "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kDXr4.woff2"
+    }
+  ]
+}

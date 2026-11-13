@@ -7,7 +7,7 @@
   "supplementaryUrl": null,
   "datasetUrl": "https://huggingface.co/datasets/ZhangQing123/cigAMT",
   "benchmarkCodeUrl": "https://github.com/jackzhangqing/cigAMT/tree/main/code",
-  "weightsUrl": "https://github.com/jackzhangqing/cigAMT/releases",
+  "weightsUrl": "https://github.com/jackzhangqing/cigAMT/releases/tag/weights-v1",
   "inventoryUrl": "https://huggingface.co/datasets/ZhangQing123/cigAMT/blob/main/DATA_INVENTORY.md",
   "sampleDownloadUrl": null,
   "releaseStatus": "data-core-released",
