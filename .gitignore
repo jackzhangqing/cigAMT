@@ -1,0 +1,50 @@
+# Local environments and editor state
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Credentials and machine-specific settings
+.env
+.env.*
+!.env.example
+*token*.txt
+*credentials*.json
+
+# Private release preparation: never part of the website deployment
+sample-release/
+private-release/
+release-preparation/
+release_staging/
+local-audits/
+local-preview/
+tmp/
+logs/
+*.log
+
+# Training data, archives, model weights, and local results
+raw-data/
+datasets/
+checkpoints/
+ckpts/
+runs/
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.mat
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Preview JSON, paper figures, and static downloads deliberately placed in
+# docs/ are tracked. Large scientific arrays remain excluded above.

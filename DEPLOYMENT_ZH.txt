@@ -1,0 +1,66 @@
+cigAMT 网站部署说明
+
+目标账号：jackzhangqing
+目标新仓库：cigAMT
+部署后预期地址：https://jackzhangqing.github.io/cigAMT/
+该地址只有在 GitHub Pages 部署成功后才代表已上线，当前本地文件不等于已发布。
+
+一、本包与原始工程的关系
+1. 这是单独的网站工程。原始实验代码和数据仅只读检查，没有在原目录内修改、运行训练或重建数据。
+2. docs/ 是公开网站内容；GitHub Pages 工作流只上传 docs/。
+3. code/README.md 只是代码模块的发布准备说明，不代表完整基准代码已公开。
+4. 小样例包和数据说明放在本仓库之外单独准备，暂不上传 Hugging Face，也不要把私有数据包或 local_provenance.json 塞进 docs/。
+
+二、本地预览
+在本网站目录打开终端，运行：
+python preview.py
+脚本会自动打开本地网页，默认 http://127.0.0.1:8873/；若该端口已占用，会打印另一个本地地址。
+结束预览时在该终端按 Ctrl+C。
+请通过 HTTP 预览，直接双击 HTML 文件不能可靠加载 JSON 配置与示例数据。
+
+三、创建仓库与上传
+1. 在浏览器中确认 GitHub 登录账号为 jackzhangqing。
+2. 创建新仓库，名称填写 cigAMT。使用 GitHub Free 时选择 Public。
+3. 若采用下面的首次上传命令，创建仓库时不要额外勾选 README、许可证和 .gitignore。
+4. 在本独立网站目录执行：
+
+git init -b main
+git add docs .github/workflows/pages.yml README.md DEPLOYMENT_ZH.txt .gitignore code/README.md asset-manifest.json preview.py tools
+git commit -m "Add cigAMT project website"
+git remote add origin https://github.com/jackzhangqing/cigAMT.git
+git push -u origin main
+
+以上命令适用于尚未初始化的独立网站目录和空白远程仓库。
+若已有 .git 或 origin，请先检查 git status 和 git remote -v，不要重复初始化或覆盖其他工程。
+通过正常浏览器或系统凭据管理器登录，不把密码、token 写进 URL、脚本或仓库。
+不要在原始数据或实验代码目录中运行这些上传命令。
+
+四、启用 GitHub Pages
+1. 进入新仓库 Settings → Pages。
+2. Build and deployment 下的 Source 选择 GitHub Actions。
+3. 进入 Actions → Deploy project website。
+4. 如果第一次 push 时还未启用 Pages，点 Run workflow，分支选 main。
+5. build 与 deploy 均成功后，使用 github-pages 部署结果提供的网址访问。
+6. 后续修改 docs/、工作流、校验脚本或图片清单后推送到 main，会先检查再自动部署。
+
+本包采用 Actions 方式发布，不要同时设置“Deploy from a branch”的 /docs 来源。
+工作流只有读取仓库、发布 Pages 和申请部署身份所需权限。
+它不会读取你的其他磁盘，也没有 Hugging Face 上传步骤。
+
+五、以后补充论文、代码和数据链接
+1. 当前入口使用 docs/site-config.json 的 paperUrl、datasetUrl、repositoryUrl 与 repositoryPublished。发布后还应同步 index.html、guide.html 中的待发布文字。
+2. 尚未公开的资源 URL 保留 null 与待发布状态；仓库真正创建后才将 repositoryPublished 设为 true。
+3. supplementaryUrl、benchmarkCodeUrl、sampleDownloadUrl 和 releaseStatus 目前为预留字段，不会自动创建网页入口。基准代码正式整理发布后，再添加对应目录或独立仓库入口。
+4. Hugging Face 数据仓库由你确认名称、许可和公开范围后再创建和上传。
+5. 原始完整数据、训练权重、带本地绝对路径的配置、私有实验日志，不放到网站 docs/。
+
+六、部署配置文件
+.github/workflows/pages.yml
+使用 actions/checkout@v4、configure-pages@v5、upload-pages-artifact@v4、deploy-pages@v4。
+上传的静态内容路径为 docs，部署环境为 github-pages。
+官方说明：https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+
+七、设计与许可
+页面结构参考了你提供的 FISBe、MicroVQA 和 IMIS-Bench 项目。
+网站实现为本项目单独编写，没有直接复制对方网页模板或科学图片。
+暂不替你指定 MIT、CC BY 等许可证。网站、原始代码、数据和第三方资产的许可需分别确认。

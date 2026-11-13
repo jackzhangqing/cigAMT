@@ -1,0 +1,101 @@
+{
+  "note": "Paper images copied byte-for-byte. Source files are read-only.",
+  "assets": [
+    {
+      "source": "figures/Overview.png",
+      "website": "docs/assets/images/overview.png",
+      "sha256": "d6e7acf2e3616516297e48f7498a9906185347f3fc34e617fb78870b2493b383",
+      "bytes": 773799,
+      "width": 1800,
+      "height": 704
+    },
+    {
+      "source": "figures/cigamt_dataset_construction.png",
+      "website": "docs/assets/images/construction.png",
+      "sha256": "9bd887a87a7ff052d31036df87eef9d49b2cd8137f110663837067619470cafc",
+      "bytes": 1297964,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "source": "figures/sferic_task_and_labeled_samples.png",
+      "website": "docs/assets/images/sferic-task.png",
+      "sha256": "41bfe699a03c6b32cccf2988f56dabea8ce816bef9913e6e4d6bae71bf3a8214",
+      "bytes": 642059,
+      "width": 1920,
+      "height": 772
+    },
+    {
+      "source": "figures/amt_task_interfaces.png",
+      "website": "docs/assets/images/task-interfaces.png",
+      "sha256": "c9f93e0ffa20c3b35bfc4361d1e3f23b77c119a4689f6f036489766715ec1831",
+      "bytes": 478314,
+      "width": 1459,
+      "height": 871
+    },
+    {
+      "source": "figures/multitask_classification_example.png",
+      "website": "docs/assets/images/classification.png",
+      "sha256": "e129502dca43fe15382688ac57fd5d95ae16437242a890b3486ff04714530c75",
+      "bytes": 335182,
+      "width": 1802,
+      "height": 967
+    },
+    {
+      "source": "figures/multitask_localization_example.png",
+      "website": "docs/assets/images/localization.png",
+      "sha256": "c104cb7fe67acd32dcf44d8128e56cd1522caf47214890d1a901a8e754722b4b",
+      "bytes": 278336,
+      "width": 928,
+      "height": 1078
+    },
+    {
+      "source": "figures/multitask_denoising_example.png",
+      "website": "docs/assets/images/denoising.png",
+      "sha256": "536b254410fccf801f3f21322b10b6175531df84e1580c12baa234c2005f237f",
+      "bytes": 638272,
+      "width": 1870,
+      "height": 946
+    },
+    {
+      "source": "figures/multitask_frequency_reconstruction.png",
+      "website": "docs/assets/images/frequency.png",
+      "sha256": "46a7caaea88498bf1d20d8158f52426c8736b5b99d4c88901efa2f567b6ce726",
+      "bytes": 626980,
+      "width": 1869,
+      "height": 946
+    },
+    {
+      "source": "figures/multitask_forecasting_example.png",
+      "website": "docs/assets/images/forecasting.png",
+      "sha256": "6d6538a5463c34afe9bc3137fc87562a005d2a7c84df680e751de45fdd86e70a",
+      "bytes": 459361,
+      "width": 1882,
+      "height": 738
+    },
+    {
+      "source": "figures/multitask_interpolation_example.png",
+      "website": "docs/assets/images/interpolation.png",
+      "sha256": "7461df9976bfd1c519f33c6fb2b76b75428dcbabb24b5e74c7aaf2117150dbf7",
+      "bytes": 509803,
+      "width": 1884,
+      "height": 739
+    },
+    {
+      "source": "figures/multitask_imputation_example.png",
+      "website": "docs/assets/images/imputation.png",
+      "sha256": "544fa04bd0451975f1aba4dc7d31ec28c7b5aaf46aa218c472b6f9eed532dddf",
+      "bytes": 838956,
+      "width": 1920,
+      "height": 821
+    },
+    {
+      "source": "figures/sferic_field_impedance_main.png",
+      "website": "docs/assets/images/sferic-impedance.png",
+      "sha256": "b09fe544cd757b16c119dfcb8f85fa5281444e0c38551e3ea26a889a4d5ed9fa",
+      "bytes": 244904,
+      "width": 793,
+      "height": 803
+    }
+  ]
+}

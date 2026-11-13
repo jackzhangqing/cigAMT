@@ -1,0 +1,1583 @@
+{
+  "version": "manuscript-draft",
+  "provenance": "Transcribed from the supplied manuscript tables/cigamt_sferic_results.tex, cigamt_noise_understanding.tex, cigamt_denoising_comparison.tex and cigamt_missing_data_comparison.tex. AMT noise and denoising results are Arithmetic summaries of A/C as reported in manuscript; reported SDs are descriptive manuscript values and do not establish pooled uncertainty or statistical significance. Generated-reference quality Table 2 is excluded. Source files are read-only.",
+  "tasks": [
+    {
+      "id": "sferic",
+      "label": "Window-level sferic identification",
+      "branchHz": 24000,
+      "inputShape": [
+        4,
+        240
+      ],
+      "description": "Binary window-level sferic identification on record-disjoint field data. Values are the manuscript-reported means and sample standard deviations over three seeds; AP, F1, precision and recall are percentages, and MCC is multiplied by 100.",
+      "sourceTable": "Table 4",
+      "metrics": [
+        {
+          "key": "validation_ap",
+          "label": "Validation AP",
+          "direction": "max",
+          "unit": "%",
+          "decimals": 2
+        },
+        {
+          "key": "test_ap",
+          "label": "Test AP",
+          "direction": "max",
+          "unit": "%",
+          "decimals": 2
+        },
+        {
+          "key": "f1",
+          "label": "F1",
+          "direction": "max",
+          "unit": "%",
+          "decimals": 2
+        },
+        {
+          "key": "precision",
+          "label": "Precision",
+          "direction": "max",
+          "unit": "%",
+          "decimals": 2
+        },
+        {
+          "key": "recall",
+          "label": "Recall",
+          "direction": "max",
+          "unit": "%",
+          "decimals": 2
+        },
+        {
+          "key": "mcc",
+          "label": "MCC",
+          "direction": "max",
+          "unit": "\u00d7100",
+          "decimals": 2
+        }
+      ],
+      "rows": [
+        {
+          "model": "STFT-ViT",
+          "values": {
+            "validation_ap": {
+              "mean": 97.01,
+              "sd": 0.2
+            },
+            "test_ap": {
+              "mean": 98.73,
+              "sd": 0.13
+            },
+            "f1": {
+              "mean": 94.34,
+              "sd": 0.11
+            },
+            "precision": {
+              "mean": 93.15,
+              "sd": 1.58
+            },
+            "recall": {
+              "mean": 95.61,
+              "sd": 1.53
+            },
+            "mcc": {
+              "mean": 92.45,
+              "sd": 0.14
+            }
+          }
+        },
+        {
+          "model": "STFT-ResNet18",
+          "values": {
+            "validation_ap": {
+              "mean": 97.33,
+              "sd": 0.31
+            },
+            "test_ap": {
+              "mean": 98.65,
+              "sd": 0.44
+            },
+            "f1": {
+              "mean": 94.38,
+              "sd": 1.12
+            },
+            "precision": {
+              "mean": 94.61,
+              "sd": 0.69
+            },
+            "recall": {
+              "mean": 94.16,
+              "sd": 1.76
+            },
+            "mcc": {
+              "mean": 92.52,
+              "sd": 1.48
+            }
+          }
+        },
+        {
+          "model": "PatchTST",
+          "values": {
+            "validation_ap": {
+              "mean": 96.18,
+              "sd": 0.22
+            },
+            "test_ap": {
+              "mean": 98.54,
+              "sd": 0.05
+            },
+            "f1": {
+              "mean": 93.78,
+              "sd": 0.46
+            },
+            "precision": {
+              "mean": 92.68,
+              "sd": 1.09
+            },
+            "recall": {
+              "mean": 94.91,
+              "sd": 0.25
+            },
+            "mcc": {
+              "mean": 91.69,
+              "sd": 0.63
+            }
+          }
+        },
+        {
+          "model": "Transformer",
+          "values": {
+            "validation_ap": {
+              "mean": 96.02,
+              "sd": 0.8
+            },
+            "test_ap": {
+              "mean": 98.48,
+              "sd": 0.35
+            },
+            "f1": {
+              "mean": 92.96,
+              "sd": 0.88
+            },
+            "precision": {
+              "mean": 91.61,
+              "sd": 1.98
+            },
+            "recall": {
+              "mean": 94.37,
+              "sd": 0.32
+            },
+            "mcc": {
+              "mean": 90.59,
+              "sd": 1.18
+            }
+          }
+        },
+        {
+          "model": "ResNet-1D",
+          "values": {
+            "validation_ap": {
+              "mean": 96.45,
+              "sd": 0.96
+            },
+            "test_ap": {
+              "mean": 98.38,
+              "sd": 0.08
+            },
+            "f1": {
+              "mean": 93.19,
+              "sd": 0.83
+            },
+            "precision": {
+              "mean": 93.58,
+              "sd": 0.49
+            },
+            "recall": {
+              "mean": 92.82,
+              "sd": 2.05
+            },
+            "mcc": {
+              "mean": 90.94,
+              "sd": 1.07
+            }
+          }
+        },
+        {
+          "model": "VGG16-1D",
+          "values": {
+            "validation_ap": {
+              "mean": 95.7,
+              "sd": 0.11
+            },
+            "test_ap": {
+              "mean": 98.3,
+              "sd": 0.13
+            },
+            "f1": {
+              "mean": 93.4,
+              "sd": 0.67
+            },
+            "precision": {
+              "mean": 90.69,
+              "sd": 1.49
+            },
+            "recall": {
+              "mean": 96.3,
+              "sd": 0.58
+            },
+            "mcc": {
+              "mean": 91.19,
+              "sd": 0.88
+            }
+          }
+        },
+        {
+          "model": "TCN",
+          "values": {
+            "validation_ap": {
+              "mean": 94.88,
+              "sd": 0.22
+            },
+            "test_ap": {
+              "mean": 97.87,
+              "sd": 0.26
+            },
+            "f1": {
+              "mean": 92.55,
+              "sd": 0.34
+            },
+            "precision": {
+              "mean": 90.45,
+              "sd": 2.05
+            },
+            "recall": {
+              "mean": 94.8,
+              "sd": 1.85
+            },
+            "mcc": {
+              "mean": 90.05,
+              "sd": 0.47
+            }
+          }
+        },
+        {
+          "model": "MLP",
+          "values": {
+            "validation_ap": {
+              "mean": 91.39,
+              "sd": 0.28
+            },
+            "test_ap": {
+              "mean": 96.96,
+              "sd": 0.23
+            },
+            "f1": {
+              "mean": 91.4,
+              "sd": 0.11
+            },
+            "precision": {
+              "mean": 93.21,
+              "sd": 0.75
+            },
+            "recall": {
+              "mean": 89.66,
+              "sd": 0.49
+            },
+            "mcc": {
+              "mean": 88.63,
+              "sd": 0.19
+            }
+          }
+        },
+        {
+          "model": "InceptionTime",
+          "values": {
+            "validation_ap": {
+              "mean": 92.49,
+              "sd": 0.4
+            },
+            "test_ap": {
+              "mean": 96.76,
+              "sd": 0.75
+            },
+            "f1": {
+              "mean": 91.35,
+              "sd": 1.05
+            },
+            "precision": {
+              "mean": 88.38,
+              "sd": 0.84
+            },
+            "recall": {
+              "mean": 94.53,
+              "sd": 2.05
+            },
+            "mcc": {
+              "mean": 88.43,
+              "sd": 1.42
+            }
+          }
+        },
+        {
+          "model": "BiGRU",
+          "values": {
+            "validation_ap": {
+              "mean": 90.69,
+              "sd": 1.26
+            },
+            "test_ap": {
+              "mean": 96.11,
+              "sd": 0.54
+            },
+            "f1": {
+              "mean": 90.1,
+              "sd": 1.13
+            },
+            "precision": {
+              "mean": 87.78,
+              "sd": 0.59
+            },
+            "recall": {
+              "mean": 92.6,
+              "sd": 3.05
+            },
+            "mcc": {
+              "mean": 86.77,
+              "sd": 1.53
+            }
+          }
+        },
+        {
+          "model": "Feature + ExtraTrees",
+          "values": {
+            "validation_ap": {
+              "mean": 85.02,
+              "sd": 0.13
+            },
+            "test_ap": {
+              "mean": 94.04,
+              "sd": 0.15
+            },
+            "f1": {
+              "mean": 87.05,
+              "sd": 0.81
+            },
+            "precision": {
+              "mean": 79.73,
+              "sd": 2.3
+            },
+            "recall": {
+              "mean": 95.93,
+              "sd": 1.67
+            },
+            "mcc": {
+              "mean": 82.88,
+              "sd": 0.94
+            }
+          }
+        },
+        {
+          "model": "Feature + RF",
+          "values": {
+            "validation_ap": {
+              "mean": 84.98,
+              "sd": 0.14
+            },
+            "test_ap": {
+              "mean": 93.85,
+              "sd": 0.17
+            },
+            "f1": {
+              "mean": 87.51,
+              "sd": 0.52
+            },
+            "precision": {
+              "mean": 81.14,
+              "sd": 0.75
+            },
+            "recall": {
+              "mean": 94.96,
+              "sd": 0.25
+            },
+            "mcc": {
+              "mean": 83.38,
+              "sd": 0.69
+            }
+          }
+        },
+        {
+          "model": "CNN-1D",
+          "values": {
+            "validation_ap": {
+              "mean": 89.14,
+              "sd": 1.02
+            },
+            "test_ap": {
+              "mean": 93.55,
+              "sd": 0.88
+            },
+            "f1": {
+              "mean": 87.73,
+              "sd": 1.01
+            },
+            "precision": {
+              "mean": 84.14,
+              "sd": 0.95
+            },
+            "recall": {
+              "mean": 91.69,
+              "sd": 2.92
+            },
+            "mcc": {
+              "mean": 83.57,
+              "sd": 1.37
+            }
+          }
+        },
+        {
+          "model": "Feature + SVM",
+          "values": {
+            "validation_ap": {
+              "mean": 84.93,
+              "sd": 0.0
+            },
+            "test_ap": {
+              "mean": 92.15,
+              "sd": 0.0
+            },
+            "f1": {
+              "mean": 85.36,
+              "sd": 0.0
+            },
+            "precision": {
+              "mean": 77.7,
+              "sd": 0.0
+            },
+            "recall": {
+              "mean": 94.69,
+              "sd": 0.0
+            },
+            "mcc": {
+              "mean": 80.57,
+              "sd": 0.0
+            }
+          }
+        },
+        {
+          "model": "Feature + LogReg",
+          "values": {
+            "validation_ap": {
+              "mean": 83.85,
+              "sd": 0.0
+            },
+            "test_ap": {
+              "mean": 89.15,
+              "sd": 0.0
+            },
+            "f1": {
+              "mean": 78.54,
+              "sd": 0.0
+            },
+            "precision": {
+              "mean": 65.94,
+              "sd": 0.0
+            },
+            "recall": {
+              "mean": 97.11,
+              "sd": 0.0
+            },
+            "mcc": {
+              "mean": 72.17,
+              "sd": 0.0
+            }
+          }
+        },
+        {
+          "model": "Prior reference",
+          "values": {
+            "validation_ap": {
+              "mean": 24.95,
+              "sd": 0.0
+            },
+            "test_ap": {
+              "mean": 25.0,
+              "sd": 0.0
+            },
+            "f1": {
+              "mean": 40.0,
+              "sd": 0.0
+            },
+            "precision": {
+              "mean": 25.0,
+              "sd": 0.0
+            },
+            "recall": {
+              "mean": 100.0,
+              "sd": 0.0
+            },
+            "mcc": {
+              "mean": 0.0,
+              "sd": 0.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "classification",
+      "label": "Noise classification",
+      "branchHz": 150,
+      "inputShape": [
+        4,
+        2048
+      ],
+      "description": "Macro-F1 over the ten noise classes. Arithmetic summaries of A/C as reported in manuscript. Dispersion values are retained as reported, not newly estimated pooled uncertainty.",
+      "sourceTable": "Table 5",
+      "metrics": [
+        {
+          "key": "macro_f1",
+          "label": "Macro-F1",
+          "direction": "max",
+          "unit": "",
+          "decimals": 4
+        }
+      ],
+      "rows": [
+        {
+          "model": "TCN",
+          "values": {
+            "macro_f1": {
+              "mean": 0.9447,
+              "sd": 22.0
+            }
+          }
+        },
+        {
+          "model": "U-Net1D",
+          "values": {
+            "macro_f1": {
+              "mean": 0.953,
+              "sd": 77.0
+            }
+          }
+        },
+        {
+          "model": "BiGRU",
+          "values": {
+            "macro_f1": {
+              "mean": 0.9362,
+              "sd": 108.0
+            }
+          }
+        },
+        {
+          "model": "Patch Transformer",
+          "values": {
+            "macro_f1": {
+              "mean": 0.8949,
+              "sd": 116.0
+            }
+          }
+        },
+        {
+          "model": "AMTMaskFormer",
+          "values": {
+            "macro_f1": {
+              "mean": 0.9299,
+              "sd": 77.0
+            }
+          }
+        },
+        {
+          "model": "Spectral FNO",
+          "values": {
+            "macro_f1": {
+              "mean": 0.8982,
+              "sd": 105.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "localization",
+      "label": "Noise localization",
+      "branchHz": 150,
+      "inputShape": [
+        4,
+        2048
+      ],
+      "description": "Point-level and event-level F1 for the shared temporal contamination mask. Arithmetic summaries of A/C as reported in manuscript. Dispersion values are retained as reported, not newly estimated pooled uncertainty.",
+      "sourceTable": "Table 5",
+      "metrics": [
+        {
+          "key": "point_f1",
+          "label": "Point F1",
+          "direction": "max",
+          "unit": "",
+          "decimals": 4
+        },
+        {
+          "key": "event_f1",
+          "label": "Event F1",
+          "direction": "max",
+          "unit": "",
+          "decimals": 4
+        }
+      ],
+      "rows": [
+        {
+          "model": "TCN",
+          "values": {
+            "point_f1": {
+              "mean": 0.9894,
+              "sd": 3.0
+            },
+            "event_f1": {
+              "mean": 0.9185,
+              "sd": 87.0
+            }
+          }
+        },
+        {
+          "model": "U-Net1D",
+          "values": {
+            "point_f1": {
+              "mean": 0.9899,
+              "sd": 2.0
+            },
+            "event_f1": {
+              "mean": 0.9699,
+              "sd": 14.0
+            }
+          }
+        },
+        {
+          "model": "BiGRU",
+          "values": {
+            "point_f1": {
+              "mean": 0.9872,
+              "sd": 3.0
+            },
+            "event_f1": {
+              "mean": 0.9627,
+              "sd": 21.0
+            }
+          }
+        },
+        {
+          "model": "Patch Transformer",
+          "values": {
+            "point_f1": {
+              "mean": 0.9745,
+              "sd": 3.0
+            },
+            "event_f1": {
+              "mean": 0.9409,
+              "sd": 3.0
+            }
+          }
+        },
+        {
+          "model": "AMTMaskFormer",
+          "values": {
+            "point_f1": {
+              "mean": 0.9888,
+              "sd": 4.0
+            },
+            "event_f1": {
+              "mean": 0.9488,
+              "sd": 2.0
+            }
+          }
+        },
+        {
+          "model": "Spectral FNO",
+          "values": {
+            "point_f1": {
+              "mean": 0.9559,
+              "sd": 11.0
+            },
+            "event_f1": {
+              "mean": 0.7937,
+              "sd": 66.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "denoising",
+      "label": "Time-domain denoising",
+      "branchHz": 150,
+      "inputShape": [
+        4,
+        2048
+      ],
+      "description": "Four-component reference-waveform recovery; clean NRMSE measures distortion on uncorrupted controls. Arithmetic summaries of A/C as reported in manuscript. Dispersion values are retained as reported, not newly estimated pooled uncertainty.",
+      "sourceTable": "Table 6(a)",
+      "metrics": [
+        {
+          "key": "nrmse",
+          "label": "Noisy NRMSE",
+          "direction": "min",
+          "unit": "",
+          "decimals": 4
+        },
+        {
+          "key": "output_snr",
+          "label": "Output SNR",
+          "direction": "max",
+          "unit": "dB",
+          "decimals": 4
+        },
+        {
+          "key": "snr_gain",
+          "label": "SNR gain",
+          "direction": "max",
+          "unit": "dB",
+          "decimals": 4
+        },
+        {
+          "key": "pearson_r",
+          "label": "Pearson r",
+          "direction": "max",
+          "unit": "",
+          "decimals": 4
+        },
+        {
+          "key": "clean_nrmse",
+          "label": "Clean NRMSE",
+          "direction": "min",
+          "unit": "",
+          "decimals": 4
+        }
+      ],
+      "rows": [
+        {
+          "model": "TCN",
+          "values": {
+            "nrmse": {
+              "mean": 0.2354,
+              "sd": 0.0017
+            },
+            "output_snr": {
+              "mean": 14.0756,
+              "sd": 0.0359
+            },
+            "snr_gain": {
+              "mean": 31.6341,
+              "sd": 0.0359
+            },
+            "pearson_r": {
+              "mean": 0.9517,
+              "sd": 0.0006
+            },
+            "clean_nrmse": {
+              "mean": 0.0074,
+              "sd": 0.0002
+            }
+          }
+        },
+        {
+          "model": "U-Net1D",
+          "values": {
+            "nrmse": {
+              "mean": 0.2262,
+              "sd": 0.0016
+            },
+            "output_snr": {
+              "mean": 14.4107,
+              "sd": 0.0498
+            },
+            "snr_gain": {
+              "mean": 31.9692,
+              "sd": 0.0498
+            },
+            "pearson_r": {
+              "mean": 0.9542,
+              "sd": 0.0006
+            },
+            "clean_nrmse": {
+              "mean": 0.0376,
+              "sd": 0.0008
+            }
+          }
+        },
+        {
+          "model": "BiGRU",
+          "values": {
+            "nrmse": {
+              "mean": 0.2497,
+              "sd": 0.0033
+            },
+            "output_snr": {
+              "mean": 13.5992,
+              "sd": 0.1274
+            },
+            "snr_gain": {
+              "mean": 31.1577,
+              "sd": 0.1274
+            },
+            "pearson_r": {
+              "mean": 0.9459,
+              "sd": 0.001
+            },
+            "clean_nrmse": {
+              "mean": 0.0272,
+              "sd": 0.0003
+            }
+          }
+        },
+        {
+          "model": "Patch Transformer",
+          "values": {
+            "nrmse": {
+              "mean": 0.5196,
+              "sd": 0.0006
+            },
+            "output_snr": {
+              "mean": 6.2346,
+              "sd": 0.0061
+            },
+            "snr_gain": {
+              "mean": 23.7931,
+              "sd": 0.0061
+            },
+            "pearson_r": {
+              "mean": 0.8056,
+              "sd": 0.0006
+            },
+            "clean_nrmse": {
+              "mean": 0.3768,
+              "sd": 0.0051
+            }
+          }
+        },
+        {
+          "model": "AMTMaskFormer",
+          "values": {
+            "nrmse": {
+              "mean": 0.207,
+              "sd": 0.0033
+            },
+            "output_snr": {
+              "mean": 15.3695,
+              "sd": 0.1656
+            },
+            "snr_gain": {
+              "mean": 32.9279,
+              "sd": 0.1656
+            },
+            "pearson_r": {
+              "mean": 0.9605,
+              "sd": 0.0009
+            },
+            "clean_nrmse": {
+              "mean": 0.0109,
+              "sd": 0.0003
+            }
+          }
+        },
+        {
+          "model": "Spectral FNO",
+          "values": {
+            "nrmse": {
+              "mean": 0.3197,
+              "sd": 0.005
+            },
+            "output_snr": {
+              "mean": 11.5272,
+              "sd": 0.1542
+            },
+            "snr_gain": {
+              "mean": 29.0857,
+              "sd": 0.1542
+            },
+            "pearson_r": {
+              "mean": 0.9218,
+              "sd": 0.0011
+            },
+            "clean_nrmse": {
+              "mean": 0.0206,
+              "sd": 0.0018
+            }
+          }
+        },
+        {
+          "model": "Identity",
+          "values": {
+            "nrmse": {
+              "mean": 11.8219,
+              "sd": null
+            },
+            "output_snr": {
+              "mean": -17.5585,
+              "sd": null
+            },
+            "snr_gain": {
+              "mean": 0.0,
+              "sd": null
+            },
+            "pearson_r": {
+              "mean": 0.188,
+              "sd": null
+            },
+            "clean_nrmse": {
+              "mean": 0.0,
+              "sd": null
+            }
+          }
+        },
+        {
+          "model": "Wavelet",
+          "values": {
+            "nrmse": {
+              "mean": 11.3197,
+              "sd": null
+            },
+            "output_snr": {
+              "mean": -16.888,
+              "sd": null
+            },
+            "snr_gain": {
+              "mean": 0.6706,
+              "sd": null
+            },
+            "pearson_r": {
+              "mean": 0.0664,
+              "sd": null
+            },
+            "clean_nrmse": {
+              "mean": 0.7023,
+              "sd": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "frequency",
+      "label": "Frequency-component denoising",
+      "branchHz": 150,
+      "inputShape": [
+        4,
+        2048
+      ],
+      "description": "Low- and high-band time-domain reference waveforms use a 5 Hz FFT split; Sum adds both outputs. Arithmetic summaries of A/C as reported in manuscript. Dispersion values are retained as reported, not newly estimated pooled uncertainty.",
+      "sourceTable": "Table 6(b)",
+      "metrics": [
+        {
+          "key": "sum_nrmse",
+          "label": "Sum NRMSE",
+          "direction": "min",
+          "unit": "",
+          "decimals": 4
+        },
+        {
+          "key": "low_nrmse",
+          "label": "Low NRMSE",
+          "direction": "min",
+          "unit": "",
+          "decimals": 4
+        },
+        {
+          "key": "high_nrmse",
+          "label": "High NRMSE",
+          "direction": "min",
+          "unit": "",
+          "decimals": 4
+        },
+        {
+          "key": "snr_gain",
+          "label": "SNR gain",
+          "direction": "max",
+          "unit": "dB",
+          "decimals": 4
+        },
+        {
+          "key": "clean_nrmse",
+          "label": "Clean NRMSE",
+          "direction": "min",
+          "unit": "",
+          "decimals": 4
+        }
+      ],
+      "rows": [
+        {
+          "model": "TCN",
+          "values": {
+            "sum_nrmse": {
+              "mean": 0.2444,
+              "sd": 0.0014
+            },
+            "low_nrmse": {
+              "mean": 0.5825,
+              "sd": 0.0025
+            },
+            "high_nrmse": {
+              "mean": 0.3107,
+              "sd": 0.0035
+            },
+            "snr_gain": {
+              "mean": 31.2499,
+              "sd": 0.0468
+            },
+            "clean_nrmse": {
+              "mean": 0.0158,
+              "sd": 0.0009
+            }
+          }
+        },
+        {
+          "model": "U-Net1D",
+          "values": {
+            "sum_nrmse": {
+              "mean": 0.2366,
+              "sd": 0.005
+            },
+            "low_nrmse": {
+              "mean": 0.5242,
+              "sd": 0.0314
+            },
+            "high_nrmse": {
+              "mean": 0.3111,
+              "sd": 0.0035
+            },
+            "snr_gain": {
+              "mean": 31.5375,
+              "sd": 0.1724
+            },
+            "clean_nrmse": {
+              "mean": 0.0438,
+              "sd": 0.0019
+            }
+          }
+        },
+        {
+          "model": "BiGRU",
+          "values": {
+            "sum_nrmse": {
+              "mean": 0.2582,
+              "sd": 0.0024
+            },
+            "low_nrmse": {
+              "mean": 0.7822,
+              "sd": 0.011
+            },
+            "high_nrmse": {
+              "mean": 0.3155,
+              "sd": 0.0069
+            },
+            "snr_gain": {
+              "mean": 30.8945,
+              "sd": 0.064
+            },
+            "clean_nrmse": {
+              "mean": 0.0299,
+              "sd": 0.0003
+            }
+          }
+        },
+        {
+          "model": "Patch Transformer",
+          "values": {
+            "sum_nrmse": {
+              "mean": 0.5254,
+              "sd": 0.0038
+            },
+            "low_nrmse": {
+              "mean": 1.1872,
+              "sd": 0.0251
+            },
+            "high_nrmse": {
+              "mean": 0.7256,
+              "sd": 0.0048
+            },
+            "snr_gain": {
+              "mean": 23.6767,
+              "sd": 0.0845
+            },
+            "clean_nrmse": {
+              "mean": 0.3767,
+              "sd": 0.004
+            }
+          }
+        },
+        {
+          "model": "AMTMaskFormer",
+          "values": {
+            "sum_nrmse": {
+              "mean": 0.2101,
+              "sd": 0.0028
+            },
+            "low_nrmse": {
+              "mean": 0.4537,
+              "sd": 0.0922
+            },
+            "high_nrmse": {
+              "mean": 0.2898,
+              "sd": 0.083
+            },
+            "snr_gain": {
+              "mean": 32.8049,
+              "sd": 0.083
+            },
+            "clean_nrmse": {
+              "mean": 0.0143,
+              "sd": 0.0022
+            }
+          }
+        },
+        {
+          "model": "Spectral FNO",
+          "values": {
+            "sum_nrmse": {
+              "mean": 0.3543,
+              "sd": 0.0043
+            },
+            "low_nrmse": {
+              "mean": 1.0932,
+              "sd": 0.083
+            },
+            "high_nrmse": {
+              "mean": 0.4858,
+              "sd": 0.0738
+            },
+            "snr_gain": {
+              "mean": 28.4152,
+              "sd": 0.0269
+            },
+            "clean_nrmse": {
+              "mean": 0.0252,
+              "sd": 0.0015
+            }
+          }
+        },
+        {
+          "model": "Identity",
+          "values": {
+            "sum_nrmse": {
+              "mean": 11.8219,
+              "sd": null
+            },
+            "low_nrmse": {
+              "mean": 74.6027,
+              "sd": null
+            },
+            "high_nrmse": {
+              "mean": 8.285,
+              "sd": null
+            },
+            "snr_gain": {
+              "mean": 0.0,
+              "sd": null
+            },
+            "clean_nrmse": {
+              "mean": 0.0,
+              "sd": null
+            }
+          }
+        },
+        {
+          "model": "Wavelet",
+          "values": {
+            "sum_nrmse": {
+              "mean": 11.3197,
+              "sd": null
+            },
+            "low_nrmse": {
+              "mean": 72.0432,
+              "sd": null
+            },
+            "high_nrmse": {
+              "mean": 7.6673,
+              "sd": null
+            },
+            "snr_gain": {
+              "mean": 0.6706,
+              "sd": null
+            },
+            "clean_nrmse": {
+              "mean": 0.7023,
+              "sd": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "forecasting",
+      "label": "Forecasting",
+      "branchHz": 150,
+      "inputShape": [
+        4,
+        2048
+      ],
+      "description": "Future-suffix prediction from the observed prefix; metrics score held-out positions only. Means and dispersion values are retained exactly as reported in the manuscript.",
+      "sourceTable": "Table 7",
+      "metrics": [
+        {
+          "key": "mse",
+          "label": "Masked MSE",
+          "direction": "min",
+          "unit": "",
+          "decimals": 4
+        },
+        {
+          "key": "pearson_r",
+          "label": "Masked Pearson r",
+          "direction": "max",
+          "unit": "",
+          "decimals": 4
+        }
+      ],
+      "rows": [
+        {
+          "model": "TCN",
+          "values": {
+            "mse": {
+              "mean": 0.8026,
+              "sd": 0.0001
+            },
+            "pearson_r": {
+              "mean": 0.2194,
+              "sd": 0.0001
+            }
+          }
+        },
+        {
+          "model": "U-Net1D",
+          "values": {
+            "mse": {
+              "mean": 0.8188,
+              "sd": 0.0
+            },
+            "pearson_r": {
+              "mean": 0.1855,
+              "sd": 0.0002
+            }
+          }
+        },
+        {
+          "model": "BiGRU",
+          "values": {
+            "mse": {
+              "mean": 0.8166,
+              "sd": 0.002
+            },
+            "pearson_r": {
+              "mean": 0.186,
+              "sd": 0.0041
+            }
+          }
+        },
+        {
+          "model": "Patch Transformer",
+          "values": {
+            "mse": {
+              "mean": 0.8151,
+              "sd": 0.0003
+            },
+            "pearson_r": {
+              "mean": 0.1854,
+              "sd": 0.0014
+            }
+          }
+        },
+        {
+          "model": "AMTMaskFormer",
+          "values": {
+            "mse": {
+              "mean": 0.8084,
+              "sd": 0.0004
+            },
+            "pearson_r": {
+              "mean": 0.2073,
+              "sd": 0.002
+            }
+          }
+        },
+        {
+          "model": "Spectral FNO",
+          "values": {
+            "mse": {
+              "mean": 0.8481,
+              "sd": 0.0004
+            },
+            "pearson_r": {
+              "mean": 0.0796,
+              "sd": 0.0012
+            }
+          }
+        },
+        {
+          "model": "DLinear",
+          "values": {
+            "mse": {
+              "mean": 0.9085,
+              "sd": 0.002
+            },
+            "pearson_r": {
+              "mean": 0.0433,
+              "sd": 0.0003
+            }
+          }
+        },
+        {
+          "model": "PatchTST",
+          "values": {
+            "mse": {
+              "mean": 0.8444,
+              "sd": 0.0007
+            },
+            "pearson_r": {
+              "mean": 0.1131,
+              "sd": 0.0011
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "interpolation",
+      "label": "Interpolation",
+      "branchHz": 150,
+      "inputShape": [
+        4,
+        2048
+      ],
+      "description": "Recovery of a continuous internal gap using two-sided context; metrics score held-out positions only. Means and dispersion values are retained exactly as reported in the manuscript.",
+      "sourceTable": "Table 7",
+      "metrics": [
+        {
+          "key": "mse",
+          "label": "Masked MSE",
+          "direction": "min",
+          "unit": "",
+          "decimals": 4
+        },
+        {
+          "key": "pearson_r",
+          "label": "Masked Pearson r",
+          "direction": "max",
+          "unit": "",
+          "decimals": 4
+        }
+      ],
+      "rows": [
+        {
+          "model": "TCN",
+          "values": {
+            "mse": {
+              "mean": 0.7157,
+              "sd": 0.0002
+            },
+            "pearson_r": {
+              "mean": 0.3268,
+              "sd": 0.0001
+            }
+          }
+        },
+        {
+          "model": "U-Net1D",
+          "values": {
+            "mse": {
+              "mean": 0.7308,
+              "sd": 0.0004
+            },
+            "pearson_r": {
+              "mean": 0.3013,
+              "sd": 0.0003
+            }
+          }
+        },
+        {
+          "model": "BiGRU",
+          "values": {
+            "mse": {
+              "mean": 0.7382,
+              "sd": 0.0012
+            },
+            "pearson_r": {
+              "mean": 0.2914,
+              "sd": 0.0021
+            }
+          }
+        },
+        {
+          "model": "Patch Transformer",
+          "values": {
+            "mse": {
+              "mean": 0.7963,
+              "sd": 0.006
+            },
+            "pearson_r": {
+              "mean": 0.1583,
+              "sd": 0.0191
+            }
+          }
+        },
+        {
+          "model": "AMTMaskFormer",
+          "values": {
+            "mse": {
+              "mean": 0.7219,
+              "sd": 0.0059
+            },
+            "pearson_r": {
+              "mean": 0.3182,
+              "sd": 0.0071
+            }
+          }
+        },
+        {
+          "model": "Spectral FNO",
+          "values": {
+            "mse": {
+              "mean": 0.8012,
+              "sd": 0.0003
+            },
+            "pearson_r": {
+              "mean": 0.1609,
+              "sd": 0.0017
+            }
+          }
+        },
+        {
+          "model": "SAITS",
+          "values": {
+            "mse": {
+              "mean": 0.8161,
+              "sd": 0.0016
+            },
+            "pearson_r": {
+              "mean": 0.0854,
+              "sd": 0.0045
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "imputation",
+      "label": "Imputation",
+      "branchHz": 150,
+      "inputShape": [
+        4,
+        2048
+      ],
+      "description": "Recovery of irregular contiguous missing runs; metrics score held-out positions only. Means and dispersion values are retained exactly as reported in the manuscript.",
+      "sourceTable": "Table 7",
+      "metrics": [
+        {
+          "key": "mse",
+          "label": "Masked MSE",
+          "direction": "min",
+          "unit": "",
+          "decimals": 4
+        },
+        {
+          "key": "pearson_r",
+          "label": "Masked Pearson r",
+          "direction": "max",
+          "unit": "",
+          "decimals": 4
+        }
+      ],
+      "rows": [
+        {
+          "model": "TCN",
+          "values": {
+            "mse": {
+              "mean": 0.6092,
+              "sd": 0.0002
+            },
+            "pearson_r": {
+              "mean": 0.571,
+              "sd": 0.0003
+            }
+          }
+        },
+        {
+          "model": "U-Net1D",
+          "values": {
+            "mse": {
+              "mean": 0.6029,
+              "sd": 0.0
+            },
+            "pearson_r": {
+              "mean": 0.575,
+              "sd": 0.0001
+            }
+          }
+        },
+        {
+          "model": "BiGRU",
+          "values": {
+            "mse": {
+              "mean": 0.6007,
+              "sd": 0.0011
+            },
+            "pearson_r": {
+              "mean": 0.5809,
+              "sd": 0.0009
+            }
+          }
+        },
+        {
+          "model": "Patch Transformer",
+          "values": {
+            "mse": {
+              "mean": 0.7242,
+              "sd": 0.0012
+            },
+            "pearson_r": {
+              "mean": 0.4481,
+              "sd": 0.0016
+            }
+          }
+        },
+        {
+          "model": "AMTMaskFormer",
+          "values": {
+            "mse": {
+              "mean": 0.5885,
+              "sd": 0.0003
+            },
+            "pearson_r": {
+              "mean": 0.5923,
+              "sd": 0.0002
+            }
+          }
+        },
+        {
+          "model": "Spectral FNO",
+          "values": {
+            "mse": {
+              "mean": 0.7364,
+              "sd": 0.0006
+            },
+            "pearson_r": {
+              "mean": 0.449,
+              "sd": 0.0011
+            }
+          }
+        },
+        {
+          "model": "SAITS",
+          "values": {
+            "mse": {
+              "mean": 0.6768,
+              "sd": 0.0041
+            },
+            "pearson_r": {
+              "mean": 0.491,
+              "sd": 0.0058
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="cigAMT: a multi-rate dataset and eight-task benchmark for audio-magnetotelluric signal understanding and restoration.">
+  <meta name="theme-color" content="#102e46">
+  <meta property="og:title" content="cigAMT — A Benchmark for Natural Electromagnetic Signals">
+  <meta property="og:description" content="Two complementary data branches. Eight tasks. Signal-level evaluation with geophysical case studies.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/overview.png">
+  <title>cigAMT | Audio-Magnetotelluric Signal Benchmark</title>
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="cigAMT home"><img src="assets/mark.svg" width="34" height="34" alt=""><span>cig<span class="brand-accent">AMT</span></span></a>
+      <nav aria-label="Main navigation">
+        <a href="#overview">Overview</a><a href="#tasks">Tasks</a><a href="#results">Results</a><a href="#resources">Resources</a>
+      </nav>
+      <a class="nav-citation" href="#citation">Cite this work <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" id="top" aria-labelledby="hero-title">
+      <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> NATURAL FIELDS · SCIENTIFIC TIME SERIES</p>
+      <h1 id="hero-title">cig<span>AMT</span></h1>
+      <p class="paper-title">A Massive-Scale Benchmark Dataset and Baselines for<br class="desktop-break"> Audio Magnetotelluric Signal Understanding and Restoration</p>
+      <p class="authors"><span class="author-name">Qing Zhang<sup>1</sup></span><span aria-hidden="true">·</span><span class="author-name">Rujun Chen<sup>1,*</sup></span><span aria-hidden="true">·</span><span class="author-name">Xinming Wu<sup>2,*</sup></span><span aria-hidden="true">·</span><span class="author-name">Hongchun Yao<sup>1</sup></span><span aria-hidden="true">·</span><span class="author-name">Hui Gao<sup>2,3</sup></span><span aria-hidden="true">·</span><span class="author-name">Yimin Dou<sup>2</sup></span></p>
+      <p class="affiliations"><sup>1</sup> Central South University &nbsp; <sup>2</sup> University of Science and Technology of China<br><sup>3</sup> Anhui University of Science and Technology &nbsp; <span class="corresponding">* Corresponding authors</span></p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#tasks">Explore the benchmark <span aria-hidden="true">↓</span></a>
+        <a class="button button-outline" href="#resources">Data &amp; code <span aria-hidden="true">↗</span></a>
+        <a class="button button-quiet" href="#citation">BibTeX</a>
+      </div>
+      <p class="release-note"><span class="status-dot" aria-hidden="true"></span> Research project · Paper, benchmark code, and full dataset release in preparation</p>
+      <div class="stats-strip" aria-label="Dataset statistics">
+        <div><strong>500,045</strong><span>four-component reference windows</span><small>150 Hz · 4 × 2,048</small></div>
+        <div><strong>718,359</strong><span>usable noise segments</span><small>field-extracted, procedural &amp; generated</small></div>
+        <div><strong>16,878</strong><span>original labeled sferic windows</span><small>24 kHz · 4 × 240</small></div>
+        <div><strong>8</strong><span>evaluation tasks</span><small>two complementary data branches</small></div>
+      </div>
+    </section>
+
+    <section class="overview-section section-shell" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / THE BENCHMARK</p><h2 id="overview-title">From natural fields to reliable signals.</h2></div><p>Data and evaluation for the coupled electric and magnetic observations used in subsurface exploration.</p></div>
+      <figure class="paper-figure overview-figure">
+        <button class="figure-zoom" data-image="assets/images/overview.png" data-caption="AMT observation challenges and the cigAMT benchmark overview." aria-label="Enlarge the cigAMT overview figure"><img src="assets/images/overview.png" width="1800" height="704" alt="Overview linking weak natural-source energy, interference, and missing observations to cigAMT resources, construction, and evaluation." fetchpriority="high"></button>
+        <figcaption><span>cigAMT at a glance.</span> Complementary source signals, annotations, and an independently constructed noise library support controlled evaluation. <span class="zoom-hint">Select a figure to enlarge ↗</span></figcaption>
+      </figure>
+      <div class="abstract-row">
+        <h3>Why AMT?</h3>
+        <div><p>Audio-magnetotelluric (AMT) sensing uses natural electromagnetic fields to probe subsurface electrical structure, with applications in mineral exploration, groundwater assessment, and geothermal exploration. Its measurements contain weak, variable natural signals alongside interference and missing observations.</p><p>cigAMT brings curated field measurements, physics-based synthesis, training-only generative augmentation, and separate noise resources into a common benchmark. It evaluates signal identification, interference analysis, denoising, and missing-data recovery, with impedance case studies that connect waveform processing to geophysical interpretation.</p></div>
+      </div>
+    </section>
+
+    <section class="tasks-section" id="tasks" aria-labelledby="tasks-title">
+      <div class="section-shell">
+        <div class="section-heading"><div><p class="eyebrow">02 / TWO BRANCHES, EIGHT TASKS</p><h2 id="tasks-title">Explore the task interfaces.</h2></div><p>One high-rate identification task and seven low-rate tasks. Select a task to inspect its input, target, and evaluation.</p></div>
+        <div class="task-explorer">
+          <div class="task-navigation" role="tablist" aria-label="Benchmark tasks" aria-orientation="vertical">
+            <p class="branch-label">24 kHz <span>· identification</span></p>
+            <button class="task-tab active" role="tab" id="tab-sferic" aria-selected="true" aria-controls="task-panel" data-task="sferic"><span class="task-number">01</span><span>Sferic identification</span><span class="task-arrow" aria-hidden="true">↗</span></button>
+            <p class="branch-label branch-low">150 Hz <span>· interference &amp; recovery</span></p>
+            <button class="task-tab" role="tab" id="tab-classification" aria-selected="false" aria-controls="task-panel" tabindex="-1" data-task="classification"><span class="task-number">02</span><span>Noise classification</span><span class="task-arrow" aria-hidden="true">↗</span></button>
+            <button class="task-tab" role="tab" id="tab-localization" aria-selected="false" aria-controls="task-panel" tabindex="-1" data-task="localization"><span class="task-number">03</span><span>Noise localization</span><span class="task-arrow" aria-hidden="true">↗</span></button>
+            <button class="task-tab" role="tab" id="tab-denoising" aria-selected="false" aria-controls="task-panel" tabindex="-1" data-task="denoising"><span class="task-number">04</span><span>Time-domain denoising</span><span class="task-arrow" aria-hidden="true">↗</span></button>
+            <button class="task-tab" role="tab" id="tab-frequency" aria-selected="false" aria-controls="task-panel" tabindex="-1" data-task="frequency"><span class="task-number">05</span><span>Frequency-component denoising</span><span class="task-arrow" aria-hidden="true">↗</span></button>
+            <button class="task-tab" role="tab" id="tab-forecasting" aria-selected="false" aria-controls="task-panel" tabindex="-1" data-task="forecasting"><span class="task-number">06</span><span>Forecasting</span><span class="task-arrow" aria-hidden="true">↗</span></button>
+            <button class="task-tab" role="tab" id="tab-interpolation" aria-selected="false" aria-controls="task-panel" tabindex="-1" data-task="interpolation"><span class="task-number">07</span><span>Interpolation</span><span class="task-arrow" aria-hidden="true">↗</span></button>
+            <button class="task-tab" role="tab" id="tab-imputation" aria-selected="false" aria-controls="task-panel" tabindex="-1" data-task="imputation"><span class="task-number">08</span><span>Imputation</span><span class="task-arrow" aria-hidden="true">↗</span></button>
+          </div>
+          <div class="task-panel" id="task-panel" role="tabpanel" aria-labelledby="tab-sferic" tabindex="0">
+            <div class="task-panel-top"><span class="tag" id="task-rate">24 kHz · 4 × 240</span><span class="small-label">SYNCHRONIZED Eₓ, Eᵧ, Hₓ, Hᵧ</span></div>
+            <h3 id="task-title">Window-level sferic identification</h3>
+            <p id="task-description">Identify informative lightning-generated transients in four-component field windows.</p>
+            <div class="task-contract"><div><span>INPUT</span><strong id="task-input">Four-component observation window</strong></div><span class="contract-arrow" aria-hidden="true">→</span><div><span>TARGET</span><strong id="task-target">Sferic / non-sferic window label</strong></div></div>
+            <figure class="task-visual"><button class="figure-zoom" id="task-image-button" data-image="assets/images/sferic-task.png" data-caption="Window-level sferic identification and labeled examples." aria-label="Enlarge the selected task example"><img id="task-image" src="assets/images/sferic-task.png" width="1920" height="772" alt="Four-component sferic examples and a window classifier." loading="lazy"></button></figure>
+            <dl class="task-details"><div><dt>Metrics</dt><dd id="task-metrics">AP, F1, precision, recall, MCC</dd></div><div><dt>Protocol</dt><dd id="task-protocol">Record-disjoint train / validation / test partitions; threshold fixed from validation.</dd></div></dl>
+            <button class="text-link" id="task-show-results">View this task’s baseline results <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+        <noscript><p>The task explorer requires JavaScript. The seven low-rate interfaces are summarized in the <a href="assets/images/task-interfaces.png">task overview figure</a>; all eight tasks are described in the <a href="guide.html#evaluation">usage guide</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section-shell results-section" id="results" aria-labelledby="results-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / BASELINE RESULTS</p><h2 id="results-title">Different tasks. Different strengths.</h2></div><p>Task-specific comparisons from the current manuscript. Compare within a task and evaluation setting.</p></div>
+      <div class="findings-row">
+        <article><span class="finding-number">98.73<span>%</span></span><h3>Window-level sferic AP</h3><p>STFT-ViT has the highest reported mean test AP in the sferic comparison.</p></article>
+        <article><span class="finding-number">5.14<span>pp</span></span><h3>Event-level differences matter</h3><p>TCN and U-Net1D have similar point-level noise-localization F1, but differ in event-level F1.</p></article>
+        <article><span class="finding-number">0.2194</span><h3>Forecasting remains difficult</h3><p>The highest reported mean Pearson correlation on held-out future segments under the evaluated protocol.</p></article>
+      </div>
+      <div class="results-toolbar"><div><label for="results-task">Task</label><select id="results-task"><option value="sferic">Sferic identification</option><option value="classification">Noise classification</option><option value="localization">Noise localization</option><option value="denoising">Time-domain denoising</option><option value="frequency">Frequency-component denoising</option><option value="forecasting">Forecasting</option><option value="interpolation">Interpolation</option><option value="imputation">Imputation</option></select></div><div><label for="results-sort">Sort by</label><select id="results-sort"><option value="">Manuscript order</option></select></div><button class="button button-small" id="download-results">Download table CSV <span aria-hidden="true">↓</span></button></div>
+      <div id="results-description" class="results-description" aria-live="polite">Loading manuscript results…</div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Task-specific baseline results"><table id="results-table"><thead></thead><tbody></tbody></table></div>
+      <p class="table-note" id="results-note">Values are reported means and available standard deviations. Arrows indicate the preferred direction. Best means are highlighted within the selected comparison.</p>
+      <p class="table-source">Source: current manuscript tables. <a href="data/benchmarks.json" download>Download the result metadata (JSON)</a>. No aggregate score across tasks is defined.</p>
+    </section>
+
+    <section class="construction-section" id="construction" aria-labelledby="construction-title"><div class="section-shell">
+      <div class="section-heading"><div><p class="eyebrow">04 / DATA CONSTRUCTION</p><h2 id="construction-title">Complementary resources, controlled conditions.</h2></div><p>Reference signals and interference resources are constructed separately. Generative extensions are used only for benchmark training.</p></div>
+      <div class="resource-composition">
+        <div><span class="small-label">REFERENCE SIGNALS · 150 Hz</span><h3>500,045 windows</h3><dl><div><dt><i class="swatch field"></i>Curated field measurements</dt><dd>7,500</dd></div><div><dt><i class="swatch physics"></i>Physics-based synthesis</dt><dd>472,545</dd></div><div><dt><i class="swatch generated"></i>Diffusion-generated</dt><dd>20,000</dd></div></dl></div>
+        <div><span class="small-label">INDEPENDENT NOISE LIBRARY</span><h3>718,359 segments</h3><dl><div><dt><i class="swatch field"></i>Field-extracted</dt><dd>8,362</dd></div><div><dt><i class="swatch physics"></i>Procedural synthesis</dt><dd>59,997</dd></div><div><dt><i class="swatch generated"></i>Diffusion-generated</dt><dd>650,000</dd></div></dl></div>
+      </div>
+      <figure class="paper-figure"><button class="figure-zoom" data-image="assets/images/construction.png" data-caption="Construction pipeline of cigAMT: field observations, physical synthesis, generative extensions, and independent noise resources." aria-label="Enlarge the data construction diagram"><img src="assets/images/construction.png" width="1920" height="1080" alt="Construction diagram for sferic annotation, multi-source AMT reference signals, and three noise-library sources." loading="lazy"></button><figcaption><span>Construction pipeline.</span> Field curation, physical synthesis, and generative augmentation support complementary tasks. Counts describe prepared windows or segments and do not imply statistical independence.</figcaption></figure>
+      <details class="protocol-details"><summary>How are controlled degradations defined?</summary><div class="protocol-grid"><div><h4>Noise injection</h4><p>Six whole-window SNR settings: −30, −25, −20, −15, −10, and −5 dB. Protocol A calibrates each component separately; Protocol C allocates noise using electric/magnetic group energies.</p></div><div><h4>Missing observations</h4><p>Forecast horizons: 10, 24, 32, 36, 64, 128, 256 samples. Internal gaps: 10, 32, 64, 128, 256 samples. Imputation covers 10–90% nominal missingness and synchronous or independent channel masks.</p></div><div><h4>Labels and splits</h4><p>The 24 kHz pool contains 512 source records; 27 are annotated. Original labeled windows are split into 11,260 / 3,130 / 2,488 training / validation / test windows. Fixed augmentation adds 11,260 training entries.</p></div></div></details>
+    </div></section>
+
+    <section class="section-shell physics-section" id="physical-evaluation" aria-labelledby="physics-title">
+      <div class="section-heading"><div><p class="eyebrow">05 / GEOPHYSICAL ASSESSMENT</p><h2 id="physics-title">Beyond waveform error.</h2></div><p>Supplementary impedance case studies examine how processing affects apparent resistivity, phase, and electromagnetic component relationships.</p></div>
+      <div class="physics-grid"><figure class="paper-figure"><button class="figure-zoom" data-image="assets/images/sferic-impedance.png" data-caption="Impedance estimates before and after sferic-window selection on an unlabeled field record. There is no known clean reference for this case." aria-label="Enlarge the sferic field impedance case"><img src="assets/images/sferic-impedance.png" width="793" height="803" alt="Apparent resistivity and phase curves before and after selecting windows using four sferic classifiers." loading="lazy"></button><figcaption><span>Sferic-window selection.</span> Four classifiers applied to the same unlabeled field record.</figcaption></figure><div class="physics-copy"><h3>Preserving the E–H relationship</h3><p>AMT interpretation uses the relationship between horizontal electric and magnetic components. Pointwise waveform scores alone provide an incomplete view of downstream response estimates.</p><ul><li>Inspect apparent resistivity and phase after processing.</li><li>Compare restored and reference responses where clean references are available.</li><li>Examine response changes on field records without assuming a known clean target.</li></ul><p class="scope-note">Impedance assessment complements sferic identification and the two denoising tasks. It is not a ninth benchmark task.</p></div></div>
+    </section>
+
+    <section class="resources-section" id="resources" aria-labelledby="resources-title"><div class="section-shell">
+      <div class="section-heading"><div><p class="eyebrow">06 / RESOURCES &amp; ACCESS</p><h2 id="resources-title">Start here.</h2></div><p>Website source, experiment code, and data releases have separate availability states.</p></div>
+      <div class="resource-links">
+        <article><span class="resource-icon" aria-hidden="true">01</span><span class="status-badge">In preparation</span><h3>Paper &amp; supplementary</h3><p>The manuscript describes data construction, quality diagnostics, evaluation protocols, and baseline comparisons.</p><a class="text-link" id="paper-link" href="#citation">Publication details forthcoming <span aria-hidden="true">↗</span></a></article>
+        <article><span class="resource-icon" aria-hidden="true">02</span><span class="status-badge">Website source</span><h3>GitHub</h3><p>A dedicated project repository for the website. Benchmark implementation release is being prepared separately.</p><a class="text-link" id="repo-link" href="#resources">Repository launch in preparation</a></article>
+        <article><span class="resource-icon" aria-hidden="true">03</span><span class="status-badge">Release in preparation</span><h3>Hugging Face dataset</h3><p>A small sample package and data card have been prepared locally. The full benchmark and sample download are not yet published.</p><a class="text-link" id="dataset-link" href="guide.html#data-formats">See the data formats <span aria-hidden="true">↗</span></a></article>
+      </div>
+      <div class="guide-callout"><div><h3>Data formats, evaluation scope, and release notes.</h3><p>Read the usage guide before comparing models or preparing a submission.</p></div><a class="button button-outline" href="guide.html">Read the guide <span aria-hidden="true">→</span></a></div>
+    </div></section>
+
+    <section class="section-shell citation-section" id="citation" aria-labelledby="citation-title">
+      <div class="section-heading"><div><p class="eyebrow">07 / CITE &amp; CONNECT</p><h2 id="citation-title">Build on cigAMT.</h2></div><p>Bibliographic details will be updated when the paper is publicly available.</p></div>
+      <div class="citation-box"><div class="citation-toolbar"><span>Provisional BibTeX · manuscript</span><button class="copy-button" id="copy-bibtex">Copy BibTeX</button></div><pre id="bibtex"><code>@unpublished{zhang_cigamt,
+  title  = {cigAMT: A Massive-Scale Benchmark Dataset and Baselines
+            for Audio Magnetotelluric Signal Understanding and Restoration},
+  author = {Zhang, Qing and Chen, Rujun and Wu, Xinming and
+            Yao, Hongchun and Gao, Hui and Dou, Yimin},
+  note   = {Manuscript. Publication details forthcoming.}
+}</code></pre></div>
+      <div class="contact-row"><p>Questions about the benchmark?</p><a href="mailto:xinmwu@ustc.edu.cn">Xinming Wu <span aria-hidden="true">↗</span></a><a href="mailto:chrujun@csu.edu.cn">Rujun Chen <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer><div class="section-shell footer-row"><a class="brand" href="#top">cig<span class="brand-accent">AMT</span></a><p>Natural electromagnetic signals. Reproducible evaluation.</p><a href="#top">Back to top ↑</a></div><div class="section-shell footer-meta"><span>Research project · Resource availability is stated above.</span><span>Project-page organization informed by <a href="https://kainmueller-lab.github.io/fisbe/index#metrics" target="_blank" rel="noopener noreferrer">FISBe</a>, <a href="https://jmhb0.github.io/microvqa/" target="_blank" rel="noopener noreferrer">MicroVQA</a>, and <a href="https://github.com/uni-medical/IMIS-Bench" target="_blank" rel="noopener noreferrer">IMIS-Bench</a>.</span></div></footer>
+  <dialog id="figure-dialog" aria-labelledby="figure-dialog-caption"><div class="dialog-toolbar"><span>Figure viewer</span><button id="close-figure" aria-label="Close figure viewer">Close <span aria-hidden="true">×</span></button></div><img id="dialog-image" src="assets/images/overview.png" alt=""><p id="figure-dialog-caption"></p><a id="open-original" href="assets/images/overview.png" target="_blank" rel="noopener noreferrer">Open original image ↗</a></dialog>
+  <p class="sr-only" aria-live="polite" id="announce"></p>
+</body>
+</html>

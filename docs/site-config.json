@@ -1,0 +1,13 @@
+{
+  "projectName": "cigAMT",
+  "repositoryUrl": "https://github.com/jackzhangqing/cigAMT",
+  "projectUrl": "https://jackzhangqing.github.io/cigAMT/",
+  "repositoryPublished": false,
+  "paperUrl": null,
+  "supplementaryUrl": null,
+  "datasetUrl": null,
+  "benchmarkCodeUrl": null,
+  "sampleDownloadUrl": null,
+  "releaseStatus": "in-preparation",
+  "note": "Set resource URLs only after those resources have actually been published. Data publication is not enabled by the website deployment workflow."
+}
