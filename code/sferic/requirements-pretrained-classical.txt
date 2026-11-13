@@ -1,0 +1,8 @@
+# Original main_fp32 sklearn estimators were fit with sklearn 1.1.3.
+# Use an environment supporting these wheels, e.g. Python 3.10.
+numpy>=1.24,<2
+scipy>=1.9,<1.14
+scikit-learn==1.1.3
+joblib>=1.2,<2
+matplotlib>=3.6,<4
+h5py>=3.8,<4

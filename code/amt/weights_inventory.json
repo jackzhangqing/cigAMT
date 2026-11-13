@@ -1,0 +1,805 @@
+{
+  "format": "Original best.pt training checkpoints; release inference exports omit optimizer/RNG.",
+  "checkpoints": [
+    {
+      "bytes": 26445886,
+      "model": "amt_maskformer",
+      "task": "forecasting",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/forecasting/amt_maskformer/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3181004,
+      "model": "bigru",
+      "task": "forecasting",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/forecasting/bigru/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 151065812,
+      "model": "dlinear",
+      "task": "forecasting",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/forecasting/dlinear/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4283134,
+      "model": "patch_transformer",
+      "task": "forecasting",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/forecasting/patch_transformer/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50592688,
+      "model": "spectral_fno",
+      "task": "forecasting",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/forecasting/spectral_fno/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3294926,
+      "model": "tcn",
+      "task": "forecasting",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/forecasting/tcn/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107814558,
+      "model": "unet1d",
+      "task": "forecasting",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/forecasting/unet1d/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 26448702,
+      "model": "amt_maskformer",
+      "task": "imputation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/imputation/amt_maskformer/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3181324,
+      "model": "bigru",
+      "task": "imputation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/imputation/bigru/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4282942,
+      "model": "patch_transformer",
+      "task": "imputation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/imputation/patch_transformer/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50596912,
+      "model": "spectral_fno",
+      "task": "imputation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/imputation/spectral_fno/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3294798,
+      "model": "tcn",
+      "task": "imputation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/imputation/tcn/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107814750,
+      "model": "unet1d",
+      "task": "imputation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/imputation/unet1d/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 26446782,
+      "model": "amt_maskformer",
+      "task": "interpolation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/interpolation/amt_maskformer/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3181324,
+      "model": "bigru",
+      "task": "interpolation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/interpolation/bigru/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4283134,
+      "model": "patch_transformer",
+      "task": "interpolation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/interpolation/patch_transformer/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50594992,
+      "model": "spectral_fno",
+      "task": "interpolation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/interpolation/spectral_fno/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3294606,
+      "model": "tcn",
+      "task": "interpolation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/interpolation/tcn/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107814430,
+      "model": "unet1d",
+      "task": "interpolation",
+      "seed": 43,
+      "suite": "clean_h20_s43",
+      "selected": true,
+      "archive_path": "amt/interpolation/unet1d/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 26448702,
+      "model": "amt_maskformer",
+      "task": "denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/denoising/amt_maskformer/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3162892,
+      "model": "bigru",
+      "task": "denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/denoising/bigru/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4184830,
+      "model": "patch_transformer",
+      "task": "denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/denoising/patch_transformer/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50594160,
+      "model": "spectral_fno",
+      "task": "denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/denoising/spectral_fno/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3291918,
+      "model": "tcn",
+      "task": "denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/denoising/tcn/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107799262,
+      "model": "unet1d",
+      "task": "denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/denoising/unet1d/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 26453438,
+      "model": "amt_maskformer",
+      "task": "frequency_denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/amt_maskformer/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3165964,
+      "model": "bigru",
+      "task": "frequency_denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/bigru/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4187902,
+      "model": "patch_transformer",
+      "task": "frequency_denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/patch_transformer/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50596912,
+      "model": "spectral_fno",
+      "task": "frequency_denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/spectral_fno/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3295054,
+      "model": "tcn",
+      "task": "frequency_denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/tcn/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107802142,
+      "model": "unet1d",
+      "task": "frequency_denoising",
+      "seed": 43,
+      "suite": "noise_AC_h20_s43",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/unet1d/seed_43/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 49135564,
+      "model": "patchtst",
+      "task": "forecasting",
+      "seed": 43,
+      "suite": "specialists_s43",
+      "selected": true,
+      "archive_path": "amt/forecasting/patchtst/seed_43/best.pt",
+      "package": "specialists"
+    },
+    {
+      "bytes": 2334860,
+      "model": "saits",
+      "task": "imputation",
+      "seed": 43,
+      "suite": "specialists_s43",
+      "selected": true,
+      "archive_path": "amt/imputation/saits/seed_43/best.pt",
+      "package": "specialists"
+    },
+    {
+      "bytes": 2335436,
+      "model": "saits",
+      "task": "interpolation",
+      "seed": 43,
+      "suite": "specialists_s43",
+      "selected": true,
+      "archive_path": "amt/interpolation/saits/seed_43/best.pt",
+      "package": "specialists"
+    },
+    {
+      "bytes": 26448766,
+      "model": "amt_maskformer",
+      "task": "denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/denoising/amt_maskformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3162956,
+      "model": "bigru",
+      "task": "denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/denoising/bigru/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4184766,
+      "model": "patch_transformer",
+      "task": "denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/denoising/patch_transformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50593776,
+      "model": "spectral_fno",
+      "task": "denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/denoising/spectral_fno/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3291982,
+      "model": "tcn",
+      "task": "denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/denoising/tcn/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107799518,
+      "model": "unet1d",
+      "task": "denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/denoising/unet1d/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 26445246,
+      "model": "amt_maskformer",
+      "task": "forecasting",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/forecasting/amt_maskformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3181132,
+      "model": "bigru",
+      "task": "forecasting",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/forecasting/bigru/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 151066004,
+      "model": "dlinear",
+      "task": "forecasting",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/forecasting/dlinear/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4283198,
+      "model": "patch_transformer",
+      "task": "forecasting",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/forecasting/patch_transformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50592688,
+      "model": "spectral_fno",
+      "task": "forecasting",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/forecasting/spectral_fno/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3294734,
+      "model": "tcn",
+      "task": "forecasting",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/forecasting/tcn/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107814366,
+      "model": "unet1d",
+      "task": "forecasting",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/forecasting/unet1d/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 26449214,
+      "model": "amt_maskformer",
+      "task": "frequency_denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/amt_maskformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3166028,
+      "model": "bigru",
+      "task": "frequency_denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/bigru/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4187838,
+      "model": "patch_transformer",
+      "task": "frequency_denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/patch_transformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50592816,
+      "model": "spectral_fno",
+      "task": "frequency_denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/spectral_fno/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3295054,
+      "model": "tcn",
+      "task": "frequency_denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/tcn/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107802590,
+      "model": "unet1d",
+      "task": "frequency_denoising",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/frequency_denoising/unet1d/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 26448638,
+      "model": "amt_maskformer",
+      "task": "imputation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/imputation/amt_maskformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3181388,
+      "model": "bigru",
+      "task": "imputation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/imputation/bigru/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4283198,
+      "model": "patch_transformer",
+      "task": "imputation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/imputation/patch_transformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50596976,
+      "model": "spectral_fno",
+      "task": "imputation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/imputation/spectral_fno/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3294926,
+      "model": "tcn",
+      "task": "imputation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/imputation/tcn/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107814878,
+      "model": "unet1d",
+      "task": "imputation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/imputation/unet1d/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 26446782,
+      "model": "amt_maskformer",
+      "task": "interpolation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/interpolation/amt_maskformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3181260,
+      "model": "bigru",
+      "task": "interpolation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/interpolation/bigru/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4283198,
+      "model": "patch_transformer",
+      "task": "interpolation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/interpolation/patch_transformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50594480,
+      "model": "spectral_fno",
+      "task": "interpolation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/interpolation/spectral_fno/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3294926,
+      "model": "tcn",
+      "task": "interpolation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/interpolation/tcn/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107814878,
+      "model": "unet1d",
+      "task": "interpolation",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/interpolation/unet1d/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 26453246,
+      "model": "amt_maskformer",
+      "task": "noise_classification",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_classification/amt_maskformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3164172,
+      "model": "bigru",
+      "task": "noise_classification",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_classification/bigru/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4186238,
+      "model": "patch_transformer",
+      "task": "noise_classification",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_classification/patch_transformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50595312,
+      "model": "spectral_fno",
+      "task": "noise_classification",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_classification/spectral_fno/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3294158,
+      "model": "tcn",
+      "task": "noise_classification",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_classification/tcn/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107800990,
+      "model": "unet1d",
+      "task": "noise_classification",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_classification/unet1d/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 26444670,
+      "model": "amt_maskformer",
+      "task": "noise_localization",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_localization/amt_maskformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3158988,
+      "model": "bigru",
+      "task": "noise_localization",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_localization/bigru/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 4182142,
+      "model": "patch_transformer",
+      "task": "noise_localization",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_localization/patch_transformer/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 50587632,
+      "model": "spectral_fno",
+      "task": "noise_localization",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_localization/spectral_fno/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 3289102,
+      "model": "tcn",
+      "task": "noise_localization",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_localization/tcn/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 107797086,
+      "model": "unet1d",
+      "task": "noise_localization",
+      "seed": 42,
+      "suite": "main_AC_bs256_s42",
+      "selected": true,
+      "archive_path": "amt/noise_localization/unet1d/seed_42/best.pt",
+      "package": "shared"
+    },
+    {
+      "bytes": 49135756,
+      "model": "patchtst",
+      "task": "forecasting",
+      "seed": 42,
+      "suite": "specialists_s42",
+      "selected": true,
+      "archive_path": "amt/forecasting/patchtst/seed_42/best.pt",
+      "package": "specialists"
+    },
+    {
+      "bytes": 2334860,
+      "model": "saits",
+      "task": "imputation",
+      "seed": 42,
+      "suite": "specialists_s42",
+      "selected": true,
+      "archive_path": "amt/imputation/saits/seed_42/best.pt",
+      "package": "specialists"
+    },
+    {
+      "bytes": 2334860,
+      "model": "saits",
+      "task": "interpolation",
+      "seed": 42,
+      "suite": "specialists_s42",
+      "selected": true,
+      "archive_path": "amt/interpolation/saits/seed_42/best.pt",
+      "package": "specialists"
+    }
+  ]
+}

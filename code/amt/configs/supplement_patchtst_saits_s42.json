@@ -1,0 +1,78 @@
+{
+  "protocol_version": 1,
+  "description": "Official-source PatchTST forecasting and SAITS interpolation/imputation architectures, adapted to the existing offline masked-window benchmark. Unified missing-target MSE, not a reproduction of original-paper training protocols. Inherits current local batch/epochs/patience/sample budgets. No A/C or added noise.",
+  "tasks": [
+    "forecasting",
+    "interpolation",
+    "imputation"
+  ],
+  "train_schemes": [
+    "none"
+  ],
+  "seeds": [
+    42
+  ],
+  "models_by_task": {
+    "forecasting": [
+      "patchtst"
+    ],
+    "interpolation": [
+      "saits"
+    ],
+    "imputation": [
+      "saits"
+    ]
+  },
+  "include_classical": false,
+  "classical_by_task": {},
+  "training": {
+    "epochs": 50,
+    "batch_size": 256,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "patience": 7,
+    "min_delta": 0.0,
+    "precision": "bf16",
+    "num_workers": 4,
+    "prefetch_factor": 2,
+    "cpu_threads": 4,
+    "gradient_clip": 1.0,
+    "block_size": 256,
+    "selection_seed": 2025,
+    "include_controls": true,
+    "max_train_samples": null,
+    "max_validation_samples": 65536,
+    "max_test_samples": null,
+    "samples_per_epoch": 262144,
+    "log_interval": 100,
+    "examples": 8,
+    "deterministic": false,
+    "model": {},
+    "selection_mode": "exact",
+    "model_overrides": {
+      "patchtst": {
+        "width": 128,
+        "depth": 3,
+        "heads": 4,
+        "feedforward_dim": 256,
+        "patch_size": 32,
+        "stride": 16,
+        "dropout": 0.1,
+        "context_length": 1792,
+        "prediction_length": 256
+      },
+      "saits": {
+        "d_model": 64,
+        "d_inner": 128,
+        "n_layers": 2,
+        "n_heads": 4,
+        "dropout": 0.1,
+        "diagonal_attention_mask": true
+      }
+    },
+    "micro_batch_size_by_model": {
+      "patchtst": 32,
+      "saits": 8
+    }
+  }
+}

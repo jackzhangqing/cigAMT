@@ -1,0 +1,37 @@
+{
+  "repository": "https://github.com/WenjieDu/SAITS",
+  "commit": "660b87f19c1277065f314f24134f646229e89ca9",
+  "commit_date": "2025-08-26T00:29:53Z",
+  "commit_url": "https://github.com/WenjieDu/SAITS/commit/660b87f19c1277065f314f24134f646229e89ca9",
+  "license": "MIT",
+  "files": [
+    {
+      "upstream_path": "LICENSE",
+      "local_path": "upstream/LICENSE",
+      "url": "https://raw.githubusercontent.com/WenjieDu/SAITS/660b87f19c1277065f314f24134f646229e89ca9/LICENSE",
+      "sha256": "8921a1d45f975221acec71bfd4959549a710c561600c5723274a55d03f059283",
+      "bytes": 1048
+    },
+    {
+      "upstream_path": "modeling/saits.py",
+      "local_path": "upstream/modeling/saits.py",
+      "url": "https://raw.githubusercontent.com/WenjieDu/SAITS/660b87f19c1277065f314f24134f646229e89ca9/modeling/saits.py",
+      "sha256": "7c52cbcff6d2a223f1e788efabf8d46ebc84f79d9d480d59ae76619b7d31a556",
+      "bytes": 8491
+    },
+    {
+      "upstream_path": "modeling/layers.py",
+      "local_path": "upstream/modeling/layers.py",
+      "url": "https://raw.githubusercontent.com/WenjieDu/SAITS/660b87f19c1277065f314f24134f646229e89ca9/modeling/layers.py",
+      "sha256": "77bed4cee066db537aa6c738d7030580b561772678af4564cbf2ab77392b78b9",
+      "bytes": 6193
+    },
+    {
+      "upstream_path": "modeling/utils.py",
+      "local_path": "upstream/modeling/utils.py",
+      "url": "https://raw.githubusercontent.com/WenjieDu/SAITS/660b87f19c1277065f314f24134f646229e89ca9/modeling/utils.py",
+      "sha256": "bca5e2704297dc9a1d7c2ad097511b70e0b5daf6ec5b3c65f379c0316d81981f",
+      "bytes": 9209
+    }
+  ]
+}

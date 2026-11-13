@@ -5,9 +5,11 @@
   "repositoryPublished": true,
   "paperUrl": null,
   "supplementaryUrl": null,
-  "datasetUrl": null,
-  "benchmarkCodeUrl": null,
+  "datasetUrl": "https://huggingface.co/datasets/ZhangQing123/cigAMT",
+  "benchmarkCodeUrl": "https://github.com/jackzhangqing/cigAMT/tree/main/code",
+  "weightsUrl": "https://github.com/jackzhangqing/cigAMT/releases",
+  "inventoryUrl": "https://huggingface.co/datasets/ZhangQing123/cigAMT/blob/main/DATA_INVENTORY.md",
   "sampleDownloadUrl": null,
-  "releaseStatus": "in-preparation",
-  "note": "Set resource URLs only after those resources have actually been published. Data publication is not enabled by the website deployment workflow."
+  "releaseStatus": "data-core-released",
+  "note": "The shared data core is hosted on Hugging Face. Code is included with this repository update; checkpoint assets are published separately through GitHub Releases. Website deployment uploads only docs/."
 }

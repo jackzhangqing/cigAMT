@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "tests_run": 7,
+  "failures": 0,
+  "errors": 0,
+  "python": "3.8.19",
+  "torch": "2.3.0",
+  "device": "cpu",
+  "default_parameters": 142768,
+  "scope": "Vendor correctness only: official source and fp32 outputs/gradients parity, full length2048 native forward/backward, CPU bf16. No CUDA or trained performance claims."
+}

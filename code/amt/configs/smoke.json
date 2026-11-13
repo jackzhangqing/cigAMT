@@ -1,0 +1,158 @@
+{
+  "protocol_version": 1,
+  "description": "Full offline data. Joint AC + six-SNR noise training; clean tasks once. Adapted families, not official pretrained reproductions.",
+  "tasks": [
+    "noise_localization",
+    "noise_classification",
+    "denoising",
+    "frequency_denoising",
+    "forecasting",
+    "interpolation",
+    "imputation"
+  ],
+  "train_schemes": [
+    "AC"
+  ],
+  "seeds": [
+    42
+  ],
+  "models_by_task": {
+    "noise_localization": [
+      "linear",
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ],
+    "noise_classification": [
+      "linear",
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ],
+    "denoising": [
+      "linear",
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ],
+    "frequency_denoising": [
+      "linear",
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ],
+    "forecasting": [
+      "linear",
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno",
+      "dlinear"
+    ],
+    "interpolation": [
+      "linear",
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ],
+    "imputation": [
+      "linear",
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ]
+  },
+  "include_classical": true,
+  "classical_by_task": {
+    "noise_localization": [
+      "robust_threshold"
+    ],
+    "noise_classification": [],
+    "denoising": [
+      "identity",
+      "wavelet"
+    ],
+    "frequency_denoising": [
+      "identity",
+      "wavelet"
+    ],
+    "forecasting": [
+      "persistence",
+      "ridge_ar"
+    ],
+    "interpolation": [
+      "linear_interp",
+      "mean_fill"
+    ],
+    "imputation": [
+      "linear_interp",
+      "mean_fill"
+    ]
+  },
+  "training": {
+    "epochs": 1,
+    "batch_size": 8,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "patience": 1,
+    "min_delta": 0.0,
+    "precision": "fp32",
+    "num_workers": 0,
+    "prefetch_factor": 2,
+    "cpu_threads": 2,
+    "gradient_clip": 1.0,
+    "block_size": 256,
+    "selection_seed": 2025,
+    "include_controls": true,
+    "max_train_samples": 96,
+    "max_validation_samples": 48,
+    "max_test_samples": 48,
+    "samples_per_epoch": null,
+    "log_interval": 10,
+    "examples": 3,
+    "deterministic": false,
+    "model": {
+      "width": 16,
+      "depth": 2,
+      "dropout": 0.0,
+      "patch_size": 32,
+      "heads": 2,
+      "modes": 8
+    },
+    "selection_mode": "probe",
+    "model_overrides": {
+      "tcn": {
+        "depth": 2
+      },
+      "amt_maskformer": {
+        "width": 16,
+        "depth": 2,
+        "patch_size": 8,
+        "heads": 2,
+        "feedforward_dim": 64,
+        "refinement_blocks": 1,
+        "local_skip": true
+      }
+    }
+  }
+}

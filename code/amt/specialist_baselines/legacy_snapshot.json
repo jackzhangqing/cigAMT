@@ -1,0 +1,67 @@
+{
+  "legacy_core_sha256": {
+    "__init__.py": "ea4303838bec787b7630c87ef29f17a151473c37086a18a484cb467e9f60d117",
+    "classical.py": "61f2df0564e7a5479540fe2a45df0cec22ff35dc8e0fbf3544f6e6be729c4237",
+    "cli.py": "e7ab41207f512581b6f9ea479f6358e6a5ac333d501ecfd099bc133e15f82af2",
+    "compare.py": "7abb83a43699b8679f557c212a975152d19e2385751f848f3d50bf14021113a6",
+    "data.py": "9310cc7cb59702cde05957463e2db6c72fe0c6ccd96b9eed9acf31cbd4fee2aa",
+    "engine.py": "7ab4247988658d03487b60b19fbb67b388981ab81e37ec88a906b7e32d92e2ec",
+    "losses.py": "8044f9716b639ffda6d20f6b23bca95e13be8f41fb82943ba717803b496ee14c",
+    "metrics.py": "d215478798d39db8c057858824ad0e9df19e7544c02879c164ec5436346146bc",
+    "models.py": "3ac24316725df0bbf7a15ad1b11bcaa597fd7c26e19ce4e9b76b1784aee4e9d0",
+    "reporting.py": "da7db17004c49b7f6428eff3b31e4e05443e9fd946ce2e3d3fbb917c26fcb328",
+    "suite.py": "c30ee148f3ad7c036b70d8951a80977a70304c9f5ddf228c4fe63ec75bb0d703",
+    "utils.py": "9f3c5b3a2a06001e885999f937168cc78de1da66562a4a1318d61eac376a7ad6"
+  },
+  "source_config": "configs/main_A_bs256_budget_s42.json",
+  "source_training": {
+    "epochs": 50,
+    "batch_size": 256,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "patience": 7,
+    "min_delta": 0.0,
+    "precision": "bf16",
+    "num_workers": 4,
+    "prefetch_factor": 2,
+    "cpu_threads": 4,
+    "gradient_clip": 1.0,
+    "block_size": 256,
+    "selection_seed": 2025,
+    "include_controls": true,
+    "max_train_samples": null,
+    "max_validation_samples": 65536,
+    "max_test_samples": null,
+    "samples_per_epoch": 262144,
+    "log_interval": 100,
+    "examples": 8,
+    "deterministic": false,
+    "model": {
+      "width": 64,
+      "depth": 4,
+      "dropout": 0.1,
+      "patch_size": 32,
+      "heads": 4,
+      "modes": 32
+    },
+    "selection_mode": "exact",
+    "model_overrides": {
+      "tcn": {
+        "depth": 8
+      },
+      "spectral_fno": {
+        "modes": 128
+      },
+      "amt_maskformer": {
+        "width": 192,
+        "depth": 4,
+        "patch_size": 8,
+        "heads": 6,
+        "feedforward_dim": 768,
+        "refinement_blocks": 2,
+        "local_skip": true
+      }
+    }
+  },
+  "purpose": "isolated PatchTST/SAITS supplement; original core is unchanged"
+}

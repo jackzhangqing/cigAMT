@@ -1,0 +1,41 @@
+PatchTST official-source AMT forecasting adapter
+
+Upstream: https://github.com/yuqinie98/PatchTST
+Pinned commit: 204c21efe0b39603ad6e2ca640ef5896646ab1a9
+Architecture: PatchTST_supervised/layers/PatchTST_backbone.py
+License: Apache-2.0; LICENSE is included. UPSTREAM.json stores original and local hashes.
+Only the two upstream internal import statements are changed to package-relative
+imports, with an explicit modification notice. The official neural blocks remain
+unchanged. adapter.py is our benchmark task wrapper, not official AMT code.
+
+The official backbone independently models each channel and shares its encoder
+and, by default, forecasting head across channels. It preserves author modules
+including RevIN, learned patch positions, residual attention and BatchNorm.
+This differs from the benchmark's joint-channel patch_transformer.
+
+Frozen AMT task convention:
+- Four channels, T=2048, known contiguous prefix, common missing suffix.
+- Actual horizon h is inferred from observed_mask only, not a target array.
+- Supply the most recent 1792 observed points to a fixed 256-step official head.
+- Use the FIRST h head predictions and place them in the actual missing suffix.
+- Mixed h values in a batch use a batched gather, without seven separate passes.
+- Keep all observed points unchanged; evaluate reconstruction at missing points.
+- Reject interior gaps, channel-dependent suffixes, horizons outside 1..256,
+  and prefixes shorter than context_length. This adapter is forecasting-only.
+- Hidden input values are removed before context extraction. The model never
+  reads clean targets or loss masks. RevIN statistics use observed context only.
+
+For h=10 the context is [246,2038); for h=256 it is [0,1792).
+For shorter horizons, older visible history is intentionally omitted to retain
+the author's fixed-size forecasting head. The existing full-window benchmark
+models may use all 2048-h visible points. Disclose that context difference.
+The shared maximum-horizon head and joint training across seven frozen horizons
+are benchmark adaptations, not the author's per-horizon paper training protocol.
+Do not claim official paper scores or untouched official experimental replication.
+
+Performance considerations:
+patch16/stride8/end gives 224 tokens for context1792; patch32/stride16/end gives112.
+Author attention reshapes to batch*4; its explicit residual attention is not a
+FlashAttention implementation. Real batch256 memory must be measured on the
+target GPU; a tiny installation check does not validate full-size GPU capacity.
+Record architecture, parameters, training budget, precision and peak memory.

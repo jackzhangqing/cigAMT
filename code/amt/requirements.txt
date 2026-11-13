@@ -1,0 +1,8 @@
+# Install a GPU-compatible PyTorch build first using https://pytorch.org/get-started/locally/
+torch>=2.3,<3
+numpy>=1.24,<2
+h5py>=3.8
+scipy>=1.10
+matplotlib>=3.7
+PyWavelets>=1.4
+psutil>=5.9

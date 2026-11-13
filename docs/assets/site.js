@@ -183,6 +183,9 @@ async function loadConfiguration() {
     else { $('#repo-link').href = '#resources'; $('#repo-link').removeAttribute('target'); $('#repo-link').textContent = 'Repository launch in preparation'; }
     configureLink('#paper-link', config.paperUrl, 'Read the paper');
     configureLink('#dataset-link', config.datasetUrl, 'Dataset on Hugging Face');
+    configureLink('#code-link', config.benchmarkCodeUrl, 'Browse benchmark code');
+    configureLink('#weights-link', config.weightsUrl, 'GitHub Releases');
+    configureLink('#inventory-link', config.inventoryUrl, 'Read the data inventory');
   } catch { /* Static availability text remains truthful if configuration cannot load. */ }
 }
 

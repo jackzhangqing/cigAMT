@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "checked_on": "2026-10-23",
+  "verification": "Primary paper abstract pages and the PyTorch 2.3 torch.stft API page were opened and checked on the web. Paper titles and model ideas are cited; no pretrained weights or official implementation code are downloaded.",
+  "implementation_policy": "All benchmark models are local from-scratch implementations. Paper-inspired classifiers are adaptations with differences explicitly recorded in bench/models.py MODEL_INFO and MODEL_NOTES.txt. This file does not establish equivalence to original-paper experiments.",
+  "sources": {
+    "vgg": {
+      "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+      "authors": ["Karen Simonyan", "Andrew Zisserman"],
+      "first_submitted_year": 2014,
+      "url": "https://arxiv.org/abs/1409.1556",
+      "source_type": "author_paper",
+      "relevant_idea": "Deep stacks of small convolution kernels; the benchmark converts the visual architecture to the project's 1D classification design."
+    },
+    "resnet": {
+      "title": "Deep Residual Learning for Image Recognition",
+      "authors": ["Kaiming He", "Xiangyu Zhang", "Shaoqing Ren", "Jian Sun"],
+      "first_submitted_year": 2015,
+      "url": "https://arxiv.org/abs/1512.03385",
+      "source_type": "author_paper",
+      "relevant_idea": "Residual basic blocks; benchmark uses 1D and small-spectrogram adaptations of the 18-layer topology."
+    },
+    "inceptiontime": {
+      "title": "InceptionTime: Finding AlexNet for Time Series Classification",
+      "authors": ["Hassan Ismail Fawaz", "Benjamin Lucas", "Germain Forestier", "Charlotte Pelletier", "Daniel F. Schmidt", "Jonathan Weber", "Geoffrey I. Webb", "Lhassane Idoumghar", "Pierre-Alain Muller", "François Petitjean"],
+      "first_submitted_year": 2019,
+      "url": "https://arxiv.org/abs/1909.04939",
+      "source_type": "author_paper",
+      "relevant_idea": "Multi-scale inception modules and residual grouping for time-series classification. The benchmark is a single network, not the paper's ensemble."
+    },
+    "tcn": {
+      "title": "An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling",
+      "authors": ["Shaojie Bai", "J. Zico Kolter", "Vladlen Koltun"],
+      "first_submitted_year": 2018,
+      "url": "https://arxiv.org/abs/1803.01271",
+      "source_type": "author_paper",
+      "relevant_idea": "Dilated causal residual convolutions. The benchmark uses a pooled binary head and omits weight normalization."
+    },
+    "gru": {
+      "title": "Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation",
+      "authors": ["Kyunghyun Cho", "Bart van Merrienboer", "Caglar Gulcehre", "Dzmitry Bahdanau", "Fethi Bougares", "Holger Schwenk", "Yoshua Bengio"],
+      "first_submitted_year": 2014,
+      "url": "https://arxiv.org/abs/1406.1078",
+      "source_type": "author_paper",
+      "relevant_idea": "Gated recurrent unit. The benchmark uses PyTorch's bidirectional GRU as a local window classifier rather than the paper's encoder-decoder."
+    },
+    "transformer": {
+      "title": "Attention Is All You Need",
+      "authors": ["Ashish Vaswani", "Noam Shazeer", "Niki Parmar", "Jakob Uszkoreit", "Llion Jones", "Aidan N. Gomez", "Lukasz Kaiser", "Illia Polosukhin"],
+      "first_submitted_year": 2017,
+      "url": "https://arxiv.org/abs/1706.03762",
+      "source_type": "author_paper",
+      "relevant_idea": "Multi-head attention and transformer encoder blocks. Local models use learned positions and classification heads rather than the translation encoder-decoder."
+    },
+    "patchtst": {
+      "title": "A Time Series is Worth 64 Words: Long-term Forecasting with Transformers",
+      "authors": ["Yuqi Nie", "Nam H. Nguyen", "Phanwadee Sinthong", "Jayant Kalagnanam"],
+      "first_submitted_year": 2022,
+      "url": "https://arxiv.org/abs/2211.14730",
+      "source_type": "author_paper",
+      "relevant_idea": "Patches and channel independence with shared embedding/encoder weights. Benchmark replaces forecasting with a binary classification head and omits RevIN and pretraining."
+    },
+    "vit": {
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "authors": ["Alexey Dosovitskiy", "Lucas Beyer", "Alexander Kolesnikov", "Dirk Weissenborn", "Xiaohua Zhai", "Thomas Unterthiner", "Mostafa Dehghani", "Matthias Minderer", "Georg Heigold", "Sylvain Gelly", "Jakob Uszkoreit", "Neil Houlsby"],
+      "first_submitted_year": 2020,
+      "url": "https://arxiv.org/abs/2010.11929",
+      "source_type": "author_paper",
+      "relevant_idea": "Image patch tokens and a class token. Benchmark is a compact four-channel STFT classifier, not the original ViT sizes or pretrained model."
+    },
+    "torch_stft": {
+      "title": "torch.stft — PyTorch 2.3 documentation",
+      "url": "https://docs.pytorch.org/docs/2.3/generated/torch.stft.html",
+      "source_type": "official_api_documentation",
+      "relevant_idea": "STFT API and Hann-window/centering options. Exact frontend settings are recorded in models.STFTLogPower; no bandpass filter is applied."
+    }
+  },
+  "model_source_ids": {
+    "mlp": [],
+    "cnn1d": [],
+    "vgg16_1d": ["vgg"],
+    "resnet1d": ["resnet"],
+    "inceptiontime": ["inceptiontime"],
+    "tcn": ["tcn"],
+    "bigru": ["gru"],
+    "transformer": ["transformer"],
+    "patchtst": ["patchtst"],
+    "stft_resnet18": ["resnet", "torch_stft"],
+    "stft_vit": ["vit", "transformer", "torch_stft"]
+  },
+  "local_baselines": {
+    "mlp": "A simple dense control baseline specified locally, without an official-paper reproduction claim.",
+    "cnn1d": "A simple three-block convolutional control baseline specified locally, without an official-paper reproduction claim.",
+    "vgg16_1d": "The project's 0-VGG19MLP.ipynb, cell 7 (zero-based), supplies the 1D VGG feature configuration and 1024/512 binary-head precedent. Benchmark construction initializes fresh parameters and does not load the historical checkpoint."
+  }
+}

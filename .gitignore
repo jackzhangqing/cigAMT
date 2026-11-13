@@ -25,6 +25,10 @@ local-preview/
 tmp/
 logs/
 *.log
+/data/
+/hub_cache/
+/downloaded_weights/
+/outputs/
 
 # Training data, archives, model weights, and local results
 raw-data/

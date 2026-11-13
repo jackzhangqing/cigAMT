@@ -1,0 +1,154 @@
+{
+  "protocol_version": 1,
+  "description": "Budget-limited direct-HDF5 benchmark. Joint AC noise training/validation with six SNRs, shared clean controls once; automatic final test A and C separately. Clean tasks use none. Linear removed; first-stage seed42. At most 30 budget iterations of 65536 rows, fixed global-exact stratified validation8192, full test. Not 30 full traversals; not official pretrained reproductions or a seven-day completion guarantee.",
+  "tasks": [
+    "noise_localization",
+    "noise_classification",
+    "denoising",
+    "frequency_denoising",
+    "forecasting",
+    "interpolation",
+    "imputation"
+  ],
+  "train_schemes": [
+    "AC"
+  ],
+  "seeds": [
+    42
+  ],
+  "models_by_task": {
+    "noise_localization": [
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ],
+    "noise_classification": [
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ],
+    "denoising": [
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ],
+    "frequency_denoising": [
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ],
+    "forecasting": [
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno",
+      "dlinear"
+    ],
+    "interpolation": [
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ],
+    "imputation": [
+      "tcn",
+      "unet1d",
+      "bigru",
+      "patch_transformer",
+      "amt_maskformer",
+      "spectral_fno"
+    ]
+  },
+  "include_classical": true,
+  "classical_by_task": {
+    "noise_localization": [
+      "robust_threshold"
+    ],
+    "noise_classification": [],
+    "denoising": [
+      "identity",
+      "wavelet"
+    ],
+    "frequency_denoising": [
+      "identity",
+      "wavelet"
+    ],
+    "forecasting": [
+      "persistence",
+      "ridge_ar"
+    ],
+    "interpolation": [
+      "linear_interp",
+      "mean_fill"
+    ],
+    "imputation": [
+      "linear_interp",
+      "mean_fill"
+    ]
+  },
+  "training": {
+    "epochs": 30,
+    "batch_size": 256,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "patience": 5,
+    "min_delta": 0.0,
+    "precision": "bf16",
+    "num_workers": 4,
+    "prefetch_factor": 2,
+    "cpu_threads": 4,
+    "gradient_clip": 1.0,
+    "block_size": 256,
+    "selection_seed": 2025,
+    "include_controls": true,
+    "max_train_samples": null,
+    "max_validation_samples": 8192,
+    "max_test_samples": null,
+    "samples_per_epoch": 65536,
+    "log_interval": 100,
+    "examples": 8,
+    "deterministic": false,
+    "model": {
+      "width": 64,
+      "depth": 4,
+      "dropout": 0.1,
+      "patch_size": 32,
+      "heads": 4,
+      "modes": 32
+    },
+    "selection_mode": "exact",
+    "model_overrides": {
+      "tcn": {
+        "depth": 8
+      },
+      "spectral_fno": {
+        "modes": 128
+      },
+      "amt_maskformer": {
+        "width": 192,
+        "depth": 4,
+        "patch_size": 8,
+        "heads": 6,
+        "feedforward_dim": 768,
+        "refinement_blocks": 2,
+        "local_skip": true
+      }
+    }
+  }
+}
