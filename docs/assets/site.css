@@ -22,5 +22,25 @@ dialog{width:min(1500px,94vw);max-height:94vh;border:1px solid #bbcfdb;border-ra
 .author-resource{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px;margin-top:12px;font-size:12px;color:var(--muted)}
 .author-resource a{font-weight:600;text-underline-offset:3px}
 .author-resource a span{margin-left:7px}
+.resource-example-link{margin-top:18px}
+.data-examples{margin-top:38px}
+.data-examples-intro{margin-bottom:22px}
+.data-examples-intro h3{margin-top:8px;font-size:28px;letter-spacing:-.6px}
+.data-examples-intro>p:last-child{margin-top:10px;font-size:13px;line-height:1.7;color:var(--muted);max-width:760px}
+.data-example-card{--example-accent:var(--blue);margin-top:22px;padding:28px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.data-example-card--noise{--example-accent:var(--teal)}
+.data-example-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.data-example-meta .tag{color:var(--example-accent)}
+.data-example-card--noise .tag{background:#eaf5f3}
+.data-example-meta .small-label{font-size:9px;letter-spacing:1.2px}
+.data-example-card h4{font-size:24px;letter-spacing:-.4px;margin-top:18px;line-height:1.3}
+.data-example-description{font-size:13px;line-height:1.7;margin-top:10px;max-width:820px}
+.data-example-card .paper-figure{padding:0;border:0;border-radius:0;margin-top:23px}
+.data-example-card .figure-zoom img{width:100%;height:auto}
+.data-example-card .figure-zoom:focus-visible{outline-offset:-3px}
+.data-example-card .paper-figure figcaption{margin-top:16px}
+.noise-class-list{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0 0;padding:0;list-style:none}
+.noise-class-list li{font-size:10px;line-height:1.5;padding:4px 9px;border:1px solid #d9e7e3;border-radius:5px;color:#286c64;background:#f5faf8}
+@media(max-width:760px){.data-examples{margin-top:29px}.data-examples-intro h3{font-size:24px}.data-examples-intro>p:last-child{font-size:12px}.data-example-card{padding:18px;margin-top:18px;border-radius:10px}.data-example-meta{gap:9px}.data-example-meta .small-label{font-size:8px;letter-spacing:.8px}.data-example-card h4{font-size:21px;margin-top:15px}.data-example-description{font-size:12px}.data-example-card .task-contract{align-items:flex-start;gap:10px}.data-example-card .task-contract strong{font-size:11px;overflow-wrap:anywhere}.data-example-card .task-contract span:not(.contract-arrow){font-size:8px;letter-spacing:.8px}.data-example-card .paper-figure{margin-top:18px}.noise-class-list{gap:6px;margin-top:15px}.noise-class-list li{font-size:9px;padding:4px 7px}}
 thead th:first-child{background:#edf3f7}tbody td:first-child{background:#fff}tbody tr:nth-child(even) td:first-child{background:#fbfcfd}tbody tr:hover td:first-child{background:#f0f6f9}
 @media(max-width:380px){.nav-shell{gap:12px}.site-header .brand img{display:none}.site-header nav{gap:12px}.site-header nav a{font-size:10px}}

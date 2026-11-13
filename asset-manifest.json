@@ -96,6 +96,22 @@
       "bytes": 244904,
       "width": 793,
       "height": 803
+    },
+    {
+      "source": "cigamt_physics_synthesis.png",
+      "website": "docs/assets/images/cigamt_physics_synthesis.png",
+      "sha256": "4fa974d3791b65b57fb009e42700dd138eefbd30efef70317f517edc7e961136",
+      "bytes": 1111615,
+      "width": 1914,
+      "height": 1050
+    },
+    {
+      "source": "noise_types_overview.png",
+      "website": "docs/assets/images/noise_types_overview.png",
+      "sha256": "1c0606050a07e3d23db2a6222be1e244a2b0e9eec2718115ef184dd188779e45",
+      "bytes": 492021,
+      "width": 1334,
+      "height": 1071
     }
   ]
 }
