@@ -112,6 +112,54 @@
       "bytes": 492021,
       "width": 1334,
       "height": 1071
+    },
+    {
+      "source": "24kHz_signals.png",
+      "website": "docs/assets/images/24khz-signals.png",
+      "sha256": "518782ea89d7d4a6d352453953004a44d628eda21281500a5a9bd375e43e1138",
+      "bytes": 716801,
+      "width": 1415,
+      "height": 1080
+    },
+    {
+      "source": "24kHz_task.png",
+      "website": "docs/assets/images/24khz-task.png",
+      "sha256": "eee1f84541826547b1dc941c10c291464feb36ee21d2c66421d887f35586ce08",
+      "bytes": 172902,
+      "width": 1153,
+      "height": 688
+    },
+    {
+      "source": "Welch_Huber_Impedance_Evaluation.png",
+      "website": "docs/assets/images/welch-huber-impedance.png",
+      "sha256": "cacea1e79a0ee0ace83c31212df2b89d38861e718e58c40eaea18dd86c3331c2",
+      "bytes": 1279228,
+      "width": 4064,
+      "height": 4175
+    },
+    {
+      "source": "../CVPR图件/sferic_field_impedance_all_models.png",
+      "website": "docs/assets/images/sferic-impedance-all-models.png",
+      "sha256": "18fb9d81dd0fb2c534fc8ae3061350d337f64adc76a5cbd43631eed539198220",
+      "bytes": 561594,
+      "width": 1100,
+      "height": 1075
+    },
+    {
+      "source": "../CVPR图件/新建文件夹/multitask_synthetic_impedance.png",
+      "website": "docs/assets/images/multitask-synthetic-impedance.png",
+      "sha256": "09511f535de76356b406d76d4b51a4cd251093023a617bb7be256000cbd36f51",
+      "bytes": 349352,
+      "width": 993,
+      "height": 992
+    },
+    {
+      "source": "../CVPR图件/新建文件夹/multitask_field_impedance.png",
+      "website": "docs/assets/images/multitask-field-impedance.png",
+      "sha256": "32088060b651a57888e9accd524b9c71a184ccffec93cbcb07674eaef6091089",
+      "bytes": 419199,
+      "width": 1014,
+      "height": 1024
     }
   ]
 }
