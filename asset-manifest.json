@@ -160,6 +160,14 @@
       "bytes": 419199,
       "width": 1014,
       "height": 1024
+    },
+    {
+      "source": "Noise library_waveform examples.png",
+      "website": "docs/assets/images/noise-library-construction.png",
+      "sha256": "130664ff62f828bb74308f2e2541c015bef39afd01287e4ccde636d817f450a9",
+      "bytes": 574796,
+      "width": 951,
+      "height": 752
     }
   ]
 }
